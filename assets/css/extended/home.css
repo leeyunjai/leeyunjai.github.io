@@ -1,17 +1,46 @@
-.td-hero { padding: 28px 24px 20px; }
-.td-hero .entry-header h1 { font-size: 34px; letter-spacing: -0.02em; }
-.td-tagline { margin-top: 6px; font-size: 14px; color: var(--secondary); letter-spacing: 0.01em; }
-.td-hero .entry-content { margin: 14px 0 18px; font-size: 15px; line-height: 1.7; }
-.td-cats { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; padding: 0; }
-.td-cat {
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 7px 12px; border-radius: 999px;
-  border: 1px solid var(--border); background: var(--theme);
-  color: var(--primary); font-size: 13px; font-weight: 500; line-height: 1;
-  transition: border-color .15s, transform .15s;
+:root {
+  --td-blue: 59 130 246; --td-violet: 139 92 246; --td-teal: 20 184 166;
+  --td-amber: 245 158 11; --td-rose: 244 63 94; --td-indigo: 99 102 241;
 }
-.td-cat:hover { border-color: var(--primary); transform: translateY(-1px); }
-.td-cat svg { color: var(--secondary); flex: none; }
-.td-cat:hover svg { color: var(--primary); }
-.post-entry { border-radius: var(--radius); }
-@media (max-width: 500px) { .td-hero { padding: 22px 18px 16px; } .td-hero .entry-header h1 { font-size: 28px; } }
+/* hero */
+.td-hero {
+  padding: 30px 26px 22px; border: 1px solid var(--border); border-radius: var(--radius);
+  background:
+    radial-gradient(600px 220px at 0% 0%, rgb(var(--td-blue) / .10), transparent 60%),
+    radial-gradient(500px 220px at 100% 100%, rgb(var(--td-violet) / .10), transparent 60%),
+    var(--entry);
+  min-height: 0;
+}
+.td-brand { display: flex; align-items: center; gap: 10px; }
+.td-mark { color: rgb(var(--td-blue)); flex: none; }
+.td-hero .entry-header h1 { font-size: 34px; letter-spacing: -0.02em; margin: 0; }
+.td-tagline { margin-top: 8px; font-size: 13px; color: var(--secondary); letter-spacing: .06em; text-transform: uppercase; }
+.td-hero .entry-content { margin: 14px 0 18px; font-size: 15px; line-height: 1.7; max-width: 62ch; }
+/* category chips */
+.td-cats { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; padding: 0; }
+.td-cat {
+  display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--theme); color: var(--primary);
+  font-size: 13px; font-weight: 500; line-height: 1; transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.td-cat svg { width: 26px; height: 26px; padding: 5px; border-radius: 50%; flex: none; color: rgb(var(--c)); background: rgb(var(--c) / .14); }
+.td-cat-laptop { --c: var(--td-blue); } .td-cat-phone { --c: var(--td-violet); } .td-cat-cpu { --c: var(--td-teal); }
+.td-cat-bot { --c: var(--td-amber); } .td-cat-git { --c: var(--td-rose); } .td-cat-sparkles { --c: var(--td-indigo); }
+.td-cat:hover { border-color: rgb(var(--c) / .6); transform: translateY(-1px); box-shadow: 0 4px 14px rgb(var(--c) / .15); }
+/* schedule strip */
+.td-sched { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.td-sched-item { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.45; color: var(--secondary); background: rgb(var(--c) / .08); border-left: 3px solid rgb(var(--c)); }
+.td-sched-item svg { flex: none; margin-top: 2px; color: rgb(var(--c)); }
+.td-sched-item b { color: var(--primary); font-weight: 600; margin-right: 4px; }
+.td-sched-weekly { --c: var(--td-blue); } .td-sched-deep { --c: var(--td-violet); }
+/* post cards */
+.td-card { border-left: 3px solid rgb(var(--c) / .9); }
+.td-card[data-cat="weekly"] { --c: var(--td-blue); } .td-card[data-cat="deep"] { --c: var(--td-violet); } .td-card[data-cat="other"] { --c: var(--td-teal); }
+.td-card:hover { box-shadow: 0 6px 20px rgb(var(--c) / .12); }
+.td-card-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.td-badge { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; color: rgb(var(--c)); background: rgb(var(--c) / .14); }
+.td-tag { font-size: 11px; padding: 3px 8px; border-radius: 6px; color: var(--secondary); background: var(--code-bg); }
+@media (max-width: 600px) {
+  .td-hero { padding: 22px 18px 16px; } .td-hero .entry-header h1 { font-size: 28px; }
+  .td-sched { grid-template-columns: 1fr; }
+}
