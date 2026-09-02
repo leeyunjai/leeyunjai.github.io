@@ -8,7 +8,7 @@ ShowReadingTime: false
 
 ## DigitalBrain
 
-DigitalBrain covers newly released hardware and open source with the specs, prices, and release dates in one place, each entry sourced. One post every weekday, with a fixed subject per day.
+DigitalBrain covers newly released hardware and software with the specs, prices, and release dates in one place, each entry sourced. One post every weekday, with a fixed subject per day.
 
 | Day | Subject |
 |---|---|
