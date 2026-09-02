@@ -52,7 +52,7 @@ buildExpired = false
 
   [params.assets]
     disableHLJS = false
-    disableFingerprinting = false
+    disableFingerprinting = true
 
   [params.label]
     text = "TechDrop"
