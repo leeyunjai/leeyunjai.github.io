@@ -66,7 +66,7 @@
 {{- $cat := index (.Params.categories | default (slice "")) 0 }}
 {{- $ko := eq site.Language.Lang "ko" }}
 {{- $catKo := dict "Deep Dive" "심층 리뷰" "Dev Picks" "개발자 픽" "Weekly Brief" "이번 주 브리핑" }}
-{{- $tagKo := dict "Laptop" "노트북" "Smartphone" "스마트폰" "SBC" "SBC" "Robot" "로봇" "AI Device" "AI 기기" "GitHub" "오픈소스" "Hugging Face" "AI 모델" "Korea" "국내" "Global" "해외" }}
+{{- $tagKo := dict "Laptop" "노트북" "Smartphone" "스마트폰" "Home Appliance" "가전" "Wearable" "웨어러블" "SBC" "SBC" "Robot" "로봇" "AI Device" "AI 기기" "GitHub" "오픈소스" "Hugging Face" "AI 모델" "Korea" "국내" "Global" "해외" }}
 <article class="{{ $class }} td-card">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}

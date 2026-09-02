@@ -11,6 +11,8 @@
 {{- else if eq $n "clock" }}<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
 {{- else if eq $n "laptop" }}<path d="M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16"/>
 {{- else if eq $n "smartphone" }}<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>
+{{- else if eq $n "plug" }}<path d="M12 22v-5M9 8V2M15 8V2M18 8v3a6 6 0 0 1-12 0V8Z"/>
+{{- else if eq $n "watch" }}<circle cx="12" cy="12" r="6"/><path d="M12 10v2l1.5 1.5M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m0-10.7.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"/>
 {{- else if eq $n "cpu" }}<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>
 {{- else if eq $n "bot" }}<path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/>
 {{- else if eq $n "git" }}<circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v2c0 .6-.4 1-1 1H7c-.6 0-1-.4-1-1V9M12 12v3"/>

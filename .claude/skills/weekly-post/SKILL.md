@@ -1,6 +1,6 @@
 ---
 name: weekly-post
-description: DigitalBrain 블로그 글 자동 작성. 평일 하루 한 편, 요일마다 카테고리가 고정돼 있다. 인자 laptop(월 노트북·PC), phone(화 스마트폰), embedded(수 SBC·임베디드 보드·로봇), dev(목 GitHub 인기 오픈소스/Hugging Face 인기 모델 격주), brief(금 이번 주 브리핑). 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
+description: DigitalBrain 블로그 글 자동 작성. 평일 하루 한 편. 인자 hw1(월)·hw2(화)는 노트북·스마트폰·가전·웨어러블 공통 풀에서 고르고, embedded(수 SBC·개발 보드·로봇), dev(목 GitHub 인기 오픈소스/Hugging Face 인기 모델 격주), brief(금 이번 주 브리핑). 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
 ---
 
 # weekly-post
@@ -14,11 +14,29 @@ DigitalBrain(https://leeyunjai.github.io/)에 글 1편(한국어·영어 파일 
 
 | 인자 | 요일 | 다루는 것 | categories |
 |---|---|---|---|
-| `laptop` | 월(1) | 노트북·PC 1~2개를 깊게 | `["Deep Dive"]` |
-| `phone` | 화(2) | 스마트폰·모바일 기기 1~2개를 깊게 | `["Deep Dive"]` |
+| `hw1` | 월(1) | **하드웨어 공통 풀**에서 1개를 깊게 | `["Deep Dive"]` |
+| `hw2` | 화(2) | **하드웨어 공통 풀**에서 1개를 깊게. 월요일과 다른 제품군 | `["Deep Dive"]` |
 | `embedded` | 수(3) | SBC·개발 보드·로봇 1~2개를 깊게 | `["Deep Dive"]` |
 | `dev` | 목(4) | GitHub 인기 오픈소스 **또는** Hugging Face 인기 모델 2~3개 | `["Dev Picks"]` |
 | `brief` | 금(5) | 이번 주 브리핑. 국내 / 해외 / 소프트웨어 | `["Weekly Brief"]` |
+
+### 하드웨어 공통 풀 (`hw1` / `hw2`)
+
+매주 노트북이 나오지는 않는다. 그래서 월·화는 카테고리를 고정하지 않고 아래 네 제품군을 한 풀로 두고,
+**그 주에 소재가 가장 좋은 것부터 고른다.**
+
+| 제품군 | tag | 공급 |
+|---|---|---|
+| 노트북·PC | `Laptop` | 월 1~2회. CES·Computex·IFA에 몰린다 |
+| 스마트폰·모바일 | `Smartphone` | 거의 매주 |
+| 가전 | `Home Appliance` | 주 1~2회. 국내 출시가 꾸준하다 |
+| 웨어러블 | `Wearable` | 워치·이어버드. 공백을 메우기 좋다 |
+
+- `hw2`(화)는 **`hw1`(월)과 다른 제품군**에서 고른다. 이틀 연속 스마트폰은 안 된다.
+- **가전은 기술적으로 쓸 것이 있는 쪽으로 한정한다.** 로봇청소기, TV·모니터, AI 기능이 붙은 가전.
+  냉장고·세탁기처럼 스펙 나열밖에 안 나오는 제품은 다루지 않는다.
+- **수요일과의 경계**: 로봇청소기 같은 소비자 완제품은 월·화(가전)로, 개발 보드와 산업·연구용 로봇은
+  수요일(`embedded`)로 보낸다. 같은 제품을 양쪽에서 다루지 않는다.
 
 토(6)·일(7)은 발행하지 않는다. 인자 없이 주말에 실행되면 아무것도 하지 않고
 "주말은 발행일이 아닙니다"라고 답하고 끝낸다.
@@ -56,11 +74,15 @@ WebFetch는 원문 확인이 꼭 필요할 때만 쓰고, 차단되면 검색 �
 억지로 채운 글 한 편이 빈 하루보다 훨씬 나쁘다. 발행 빈도를 채우려고 오래된 제품을 다시 쓰거나,
 루머·유출 기사를 제품인 것처럼 쓰거나, 스펙을 지어내면 안 된다.
 카테고리 중에서는 **수요일 `embedded`가 가장 자주 빈다.** 격주로 빠지는 것이 정상이다.
+월·화는 제품군이 네 개라 거의 매주 소재가 있어야 정상이다. 비면 검색 범위를 다시 확인한다.
 
-### 2-1. `laptop` / `phone` / `embedded` (월·화·수)
+### 2-1. `hw1` / `hw2` / `embedded` (월·화·수)
 
-해당 카테고리에서 최근 14일 내 발표된 제품 1~2개를 골라 경쟁 제품과 비교하며 깊게 다룬다.
+해당 풀에서 최근 14일 내 발표된 제품 1~2개를 골라 경쟁 제품과 비교하며 깊게 다룬다.
 국내 출시 여부와 국내 가격을 별도 항목으로 표기한다. 미정이면 "확인 필요".
+
+`hw1`·`hw2`는 위 **하드웨어 공통 풀** 표의 네 제품군을 모두 후보로 놓고 검색한다.
+한 제품군만 검색해 보고 없다고 판단하지 말 것. 네 곳을 다 훑고도 없을 때만 발행하지 않는다.
 
 `embedded`는 SBC·개발 보드·로봇을 모두 포함한다. **임베디드 관점을 반드시 넣는다.**
 전원(전압·전류·전력 범위), 발열, 메모리 한계, 커넥터, 실제로 로봇이나 장비에 올릴 때 걸리는 지점.
@@ -120,8 +142,10 @@ content/posts/YYYY-MM-DD-<slug>.en.md
 ```
 
 - slug는 영문 kebab-case. **두 파일의 date·slug는 동일**해야 한다.
-- slug는 모드 접두어로 시작한다: `laptop-`, `phone-`, `embedded-`, `dev-`, `brief-`
-  예: `laptop-lg-gram-book-14`, `embedded-jetson-orin-nano-2`, `dev-github-trending`, `brief-weekly-gadgets`
+- slug는 **제품군 접두어**로 시작한다. 요일이 아니라 실제로 다룬 것을 따른다.
+  `laptop-` `phone-` `appliance-` `wearable-` (월·화) / `embedded-` (수) / `dev-` (목) / `brief-` (금)
+  예: `laptop-lg-gram-book-14`, `appliance-lg-roboking`, `wearable-galaxy-watch`,
+  `embedded-jetson-orin-nano-2`, `dev-github-trending`, `brief-weekly-gadgets`
 - 같은 날짜에 같은 slug가 있으면 뒤에 `-2`를 붙인다.
 
 front matter (두 파일 공통 구조):
@@ -132,7 +156,7 @@ title: "제목 (해당 언어)"
 date: YYYY-MM-DDTHH:MM:SS+09:00   # 현재 시각(KST). 미래 금지. 두 파일 동일
 slug: "<slug>"                    # 두 파일 동일
 summary: "한 줄 요약 (해당 언어)"
-tags: ["Laptop", "Smartphone", "SBC", "Robot", "AI Device", "GitHub", "Hugging Face", "Korea", "Global"]
+tags: ["Laptop", "Smartphone", "Home Appliance", "Wearable", "SBC", "Robot", "AI Device", "GitHub", "Hugging Face", "Korea", "Global"]
 categories: ["Deep Dive"]         # 0번 표 참고. 두 파일 동일
 draft: false
 ---
@@ -181,7 +205,7 @@ tags·categories는 영문으로 통일한다. tags는 실제 다룬 것만 넣�
 - 분량: **한국어 1500~2500자**(공백 포함, front matter·표 제외), **영어 700~1200단어**(표 제외).
   한국어는 존댓말.
 
-### `laptop` / `phone` / `embedded` 구조
+### `hw1` / `hw2` / `embedded` 구조
 
 도입 2~3문장 → `## {제품명}` 상세(스펙 표) → 경쟁 제품 비교 표 → 장단점과 어떤 사용자에게 맞는지 →
 국내 출시 여부 → `## 총평` / `## Verdict`
