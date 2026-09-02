@@ -90,10 +90,10 @@ buildExpired = false
     weight = 1
     title = "DigitalBrain"
     [languages.ko.params]
-      description = "매주 새로 나온 IT 기기와 개발 오픈소스를 정리하는 블로그"
+      description = "새로 나온 기기와 오픈소스를 스펙·가격·출처와 함께 정리하는 블로그"
       [languages.ko.params.homeInfoParams]
-        Title = "이번 주 IT 신제품, 확인된 것만."
-        Content = "새로 나온 노트북·스마트폰·SBC·로봇과 개발자용 오픈소스를 스펙, 가격, 출처와 함께 정리합니다."
+        Title = "새로 나온 기기와 오픈소스, 확인된 것만."
+        Content = "노트북·스마트폰·SBC·로봇부터 GitHub 인기 저장소와 Hugging Face 모델까지, 스펙과 가격을 출처와 함께 정리합니다."
     [languages.ko.params.footer]
       text = "[소개](/about/) · [개인정보처리방침](/privacy/) · [문의](mailto:leeyunjai1982@gmail.com)"
     [languages.ko.menu]
@@ -129,10 +129,10 @@ buildExpired = false
     weight = 2
     title = "DigitalBrain"
     [languages.en.params]
-      description = "Weekly roundup of new tech gadgets and developer open source"
+      description = "New hardware and open source, with specs, prices, and a source for every claim"
       [languages.en.params.homeInfoParams]
-        Title = "This week in tech hardware, verified."
-        Content = "New laptops, phones, single-board computers, robots, and developer open source, with specs, prices, and a source for every claim."
+        Title = "New hardware and open source, verified."
+        Content = "Laptops, phones, single-board computers and robots, plus trending repositories and models, with specs, prices, and a source for every claim."
     [languages.en.params.footer]
       text = "[About](/en/about/) · [Privacy](/en/privacy/) · [Contact](mailto:leeyunjai1982@gmail.com)"
     [languages.en.menu]

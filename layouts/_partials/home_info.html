@@ -12,7 +12,7 @@
     <h1 class="td-headline">{{ .Title | markdownify }}</h1>
     <p class="td-lede">{{ .Content | markdownify }}</p>
     <div class="td-meta-row">
-        <span class="td-pub">{{ partial "icon.html" (dict "name" "calendar" "size" 14) }}{{ if $ko }}매주 월·목 발행{{ else }}Published Mon &amp; Thu{{ end }}</span>
+        <span class="td-pub">{{ partial "icon.html" (dict "name" "calendar" "size" 14) }}{{ if $ko }}평일 매일 발행{{ else }}New post every weekday{{ end }}</span>
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </div>
     <ul class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">

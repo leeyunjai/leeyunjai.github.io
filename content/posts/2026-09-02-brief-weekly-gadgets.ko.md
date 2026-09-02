@@ -1,10 +1,10 @@
 ---
 title: "이번 주 신제품: LG 그램북 AI, 갤럭시 북6, Jetson Orin Nano 2, Poco F9"
 date: 2026-09-02T15:00:00+09:00
-slug: "weekly-new-gadgets"
+slug: "brief-weekly-gadgets"
 summary: "같은 날 출시된 국내 실속형 14형 노트북 2종, NVIDIA 차세대 보급형 Jetson, 가격이 오른 Poco F9 시리즈를 정리했습니다."
 tags: ["Laptop", "SBC", "Smartphone", "GitHub", "Korea", "Global"]
-categories: ["Weekly New Gadgets"]
+categories: ["Weekly Brief"]
 draft: false
 ---
 9월 첫째 주는 애플 9월 9일 행사와 IFA 베를린을 앞둔 조용한 주였지만, 눈에 띄는 제품이 네 가지 있었습니다. 국내에서는 LG전자와 삼성전자가 같은 날 실속형 14형 노트북을 출시했습니다. 해외에서는 NVIDIA가 로봇용 보급형 Jetson을 새로 내놓았고, Poco는 가격이 꽤 오른 F9 시리즈를 발표했습니다.
@@ -48,7 +48,7 @@ draft: false
 - 출시: 8월 25일(현지 시간) 발표, 모듈과 개발자 키트는 2027년 상반기 출하 예정
 - 의견: GPU가 여전히 Ampere라서 성능 향상은 새 아키텍처가 아니라 CUDA 코어 증가와 빠른 메모리에서 옵니다. 온디바이스 비전 로봇 기준으로는 8GB 메모리가 다시 한계가 될 겁니다. 최대 40W 모드는 소형 로봇의 전원 레일과 방열을 다시 설계해야 한다는 뜻이니, 기존 25W 예산을 그대로 가정하면 안 됩니다.
 - 출처: [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai), [Hackster.io](https://www.hackster.io/news/say-hello-to-the-nvidia-jetson-orin-nano-2-68cf1241460f)
-- 자세한 비교와 전력 설계 관점은 [SBC 심층 리뷰: Jetson Orin Nano 2는 무엇이 달라졌나](/2026/09/02/sbc-deep-dive-jetson-orin-nano-2/)에서 따로 다뤘습니다.
+- 자세한 비교와 전력 설계 관점은 [SBC 심층 리뷰: Jetson Orin Nano 2는 무엇이 달라졌나](/2026/09/02/embedded-jetson-orin-nano-2/)에서 따로 다뤘습니다.
 
 ### Poco F9 Pro / F9 Ultra
 

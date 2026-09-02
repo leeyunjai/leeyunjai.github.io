@@ -1,7 +1,7 @@
 ---
 title: "SBC 심층 리뷰: Jetson Orin Nano 2는 무엇이 달라졌나"
 date: 2026-09-02T17:40:00+09:00
-slug: "sbc-deep-dive-jetson-orin-nano-2"
+slug: "embedded-jetson-orin-nano-2"
 summary: "NVIDIA가 발표한 보급형 Jetson 후속 모델을 현행 Orin Nano Super와 스펙으로 비교하고, 로봇에 올릴 때 실제로 문제가 되는 전력과 메모리를 짚었습니다."
 tags: ["SBC", "Robot", "Global"]
 categories: ["Deep Dive"]

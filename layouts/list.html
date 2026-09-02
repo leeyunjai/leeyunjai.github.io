@@ -64,19 +64,19 @@
 {{- end }}
 
 {{- $cat := index (.Params.categories | default (slice "")) 0 }}
-{{- $catKey := cond (eq $cat "Deep Dive") "deep" (cond (eq $cat "Weekly New Gadgets") "weekly" "other") }}
 {{- $ko := eq site.Language.Lang "ko" }}
+{{- $catKo := dict "Deep Dive" "심층 리뷰" "Dev Picks" "개발자 픽" "Weekly Brief" "이번 주 브리핑" }}
+{{- $tagKo := dict "Laptop" "노트북" "Smartphone" "스마트폰" "SBC" "SBC" "Robot" "로봇" "AI Device" "AI 기기" "GitHub" "오픈소스" "Hugging Face" "AI 모델" "Korea" "국내" "Global" "해외" }}
 <article class="{{ $class }} td-card">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     {{- if $cat }}
-    <p class="td-kicker">
-      {{- if eq $catKey "weekly" }}{{ if $ko }}주간 신제품{{ else }}Weekly{{ end }}
-      {{- else if eq $catKey "deep" }}{{ if $ko }}심층 리뷰{{ else }}Deep dive{{ end }}
-      {{- else }}{{ $cat }}{{ end -}}
-      {{- with .Params.tags }} · {{ delimit (first 3 .) " · " }}{{ end -}}
-    </p>
+    {{- $parts := slice (cond $ko (index $catKo $cat | default $cat) $cat) }}
+    {{- range first 2 (.Params.tags | default slice) }}
+      {{- $parts = $parts | append (cond $ko (index $tagKo . | default .) .) }}
+    {{- end }}
+    <p class="td-kicker">{{ delimit $parts " · " }}</p>
     {{- end }}
     <h2 class="entry-hint-parent">
       {{- .Title }}

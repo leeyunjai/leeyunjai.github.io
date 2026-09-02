@@ -8,10 +8,21 @@ ShowReadingTime: false
 
 ## DigitalBrain
 
-DigitalBrain is a weekly roundup of newly announced tech hardware (laptops, smartphones, single-board computers, robots, AI devices) and notable developer open source projects, with the key specs, prices, and release dates in one place.
+DigitalBrain covers newly released hardware and open source with the specs, prices, and release dates in one place, each entry sourced. One post every weekday, with a fixed subject per day.
+
+| Day | Subject |
+|---|---|
+| Monday | Laptops and PCs |
+| Tuesday | Phones and mobile devices |
+| Wednesday | Single-board computers, dev boards, robots |
+| Thursday | Dev picks (trending GitHub repositories / Hugging Face models) |
+| Friday | The week in brief (Korea / Global / Software) |
+
+The rules this site holds to:
 
 - Only products and projects that were actually announced are covered, and every entry links to its source.
-- Specs follow the manufacturer's official figures. Anything unconfirmed is marked "TBC".
+- Specs follow the manufacturer's official figures. Anything unconfirmed is marked "TBC" rather than filled in.
+- **When there is nothing genuinely new that day, nothing is published.** No filler to keep a streak alive.
 - Short opinions are the author's own and are not purchase recommendations.
 - The Korean and English posts are written separately from the same research, each for its own readers.
 
