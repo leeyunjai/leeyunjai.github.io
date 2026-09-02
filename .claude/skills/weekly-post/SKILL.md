@@ -215,3 +215,25 @@ git push -u origin main
 ```
 
 푸시 후 GitHub Actions(`Deploy Hugo site to GitHub Pages`)가 실행된다. 실패하면 로그를 보고 고친다.
+
+## 7. AdSense 신청 시점 알림 (매 실행 마지막)
+
+푸시가 끝나면 아래를 실행해 AdSense 신청 시점이 됐는지 확인한다.
+
+```bash
+POSTS=$(ls content/posts/*.ko.md 2>/dev/null | wc -l)
+ADSENSE=$(grep -E '^[[:space:]]*adsense[[:space:]]*=' hugo.toml | sed 's/.*"\(.*\)".*/\1/')
+echo "posts=$POSTS adsense='$ADSENSE'"
+```
+
+- `POSTS`가 **25 이상**이고 `ADSENSE`가 **빈 문자열**이면, 실행 결과 메시지 마지막에 아래 내용을 반드시 포함한다.
+  (Routine 푸시 알림으로 사용자에게 전달된다.)
+
+  > **AdSense 신청 시점입니다.** 글이 N편 쌓였습니다. https://adsense.google.com 에서 사이트를 등록하고 심사를 신청하세요.
+  > 승인 후 publisher ID(`ca-pub-...`)를 알려주시면 `hugo.toml`의 `params.adsense`와 `static/ads.txt`에 넣어 배포하겠습니다.
+  > 심사 전 확인: 소개 페이지에 연락처(이메일), 개인정보처리방침 링크, 최근 글의 출처 링크.
+
+- `ADSENSE`가 비어 있지 않으면(이미 적용됨) 아무것도 하지 않는다.
+- `POSTS`가 25 미만이면 아무것도 하지 않는다. 매 실행마다 알리지 않는다.
+
+**AdSense ID는 직접 만들거나 추측하지 않는다.** 사용자가 알려준 값만 넣는다.
