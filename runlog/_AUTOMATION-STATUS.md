@@ -17,8 +17,23 @@
 세 브랜치 어디에도 푸시되지 않았고, PR도 만들어지지 않았다.
 예약 세션의 로그는 다른 세션에서 열람할 수 없어 에러 원문은 확보하지 못했다.
 
-**결론: 예약(Routine) 세션에는 이 저장소에 대한 쓰기 권한이 없다.**
-대화형 세션(사람이 연 Claude Code 세션)은 정상적으로 푸시된다. 같은 날 여러 번 확인했다.
+**원인: 이 Routine들에 GitHub 커넥터가 붙어 있지 않다.**
+
+Routine을 MCP 도구(`create_trigger`)로 만들면 아래 경고가 나온다. 만들 때 이를 놓쳤다.
+
+> this trigger stores no MCP connectors, so the sessions it fires will run without
+> connector (mcp__<server>__*) tools. ... If the routine needs connectors, create it
+> from a session that holds them, or ask the user to create it from the claude.ai routines UI.
+
+GitHub 연동 자체는 계정에 연결돼 있다(claude.ai → 사용자 지정 → 커넥터 → GitHub 연동 ✓).
+문제는 **예약 세션이 그 연동을 물려받지 못한다**는 것이다. 그래서 컨테이너에 GitHub 자격증명이 없고,
+`git push` 가 어느 브랜치로도 되지 않는다.
+
+`create_trigger` 에 `connectors` 인자를 넣어 붙이는 것도 시도했으나 조직 정책으로 막혀 있다.
+
+> create_trigger: the connectors parameter is not available for this organization.
+
+대화형 세션(사람이 연 Claude Code 세션)은 커넥터를 물고 있어 정상적으로 푸시된다.
 
 ## 지금 상태
 
@@ -26,13 +41,42 @@
   그대로 두면 매일 새벽 $2.4씩 쓰면서 결과물이 없다.
 - 스킬(`.claude/skills/weekly-post/SKILL.md`)은 그대로 쓸 수 있다. 이미지 단계는 뺐다.
 
-## 다시 켜려면
+## 다시 켜려면 — claude.ai Routines UI에서 새로 만들 것
 
-1. 예약 세션에 GitHub 쓰기 권한을 준다.
-   - claude.ai → Settings → Connectors → GitHub 재연결
-   - 또는 환경(Environment) 설정에서 이 저장소를 push 권한으로 붙인다
-2. Routine 하나를 골라 수동으로 한 번 실행(fire)해서 `runlog/` 에 파일이 올라오는지 확인한다.
-3. 올라오면 5개 이름에서 `[중지]`를 떼고 enabled = true 로 바꾼다.
+코드로 만든 Routine에는 커넥터를 붙일 수 없다. **웹 UI에서 직접 만들어야 한다.**
+
+1. claude.ai → Claude Code → Routines (또는 사용자 지정 화면의 Routines)
+2. 새 Routine 만들기. 저장소는 `leeyunjai/leeyunjai.github.io`, GitHub 커넥터가 붙는지 확인
+3. 모델 Claude Sonnet 5, 알림 켜기
+4. 아래 프롬프트를 그대로 붙여넣기 (요일별로 하나씩, 총 5개)
+5. **먼저 하나만 만들어 수동 실행**해 보고, `runlog/` 에 파일이 올라오면 나머지를 만든다
+6. 기존 `[중지]` Routine 5개는 지운다
+
+### cron (UTC 기준, 한국시간 03:00)
+
+| 요일 | cron | 인자 |
+|---|---|---|
+| 월 | `0 18 * * 0` | `hw1` |
+| 화 | `0 18 * * 1` | `hw2` |
+| 수 | `0 18 * * 2` | `embedded` |
+| 목 | `0 18 * * 3` | `dev` |
+| 금 | `0 18 * * 4` | `brief` |
+
+### 붙여넣을 프롬프트 (`<MODE>` 를 위 표의 인자로 바꿀 것)
+
+```
+저장소 leeyunjai/leeyunjai.github.io 에서 다음을 수행하세요.
+
+1. git fetch origin main && git checkout main && git pull origin main
+2. .claude/skills/weekly-post/SKILL.md 를 읽고, 인자 `<MODE>` 모드로 그 지시를 그대로 따르세요.
+3. 최근 14일 내 새로 다룰 소재가 없거나 최근 30일 글에서 이미 다룬 것뿐이면
+   글을 쓰지 말고 그 사실만 한 줄로 보고하고 끝내세요. 억지로 채우지 마세요.
+4. 글을 썼으면 다른 것을 하기 전에 먼저 main에 커밋·푸시하세요.
+   이 저장소는 main 직접 푸시가 승인된 워크플로입니다. PR을 만들지 마세요.
+5. 푸시가 실패하면 에러 메시지 원문 전체를 최종 보고 첫 줄에 쓰세요. 조용히 끝내지 마세요.
+6. runlog/<날짜>-<MODE>.md 에 실행 기록을 남기고 함께 푸시하세요.
+7. GitHub Actions "Deploy Hugo site to GitHub Pages" 결과를 확인하세요.
+```
 
 ## 그때까지 발행하는 법
 
