@@ -1,6 +1,6 @@
 ---
 name: weekly-post
-description: TechDrop 블로그 주간 글 자동 작성. 인자 new(월요일)는 최근 7일 IT 신제품을 국내/해외로 나눠 정리, 인자 deep(목요일)은 노트북→스마트폰→SBC→GitHub 인기 오픈소스→Hugging Face 인기 모델 순환 심층 리뷰. 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
+description: TechDrop 블로그 주간 글 자동 작성. 인자 new(월요일)는 최근 7일 IT 신제품을 국내/해외/소프트웨어(Hugging Face 인기 모델·GitHub 인기 오픈소스)로 나눠 정리, 인자 deep(목요일)은 노트북→스마트폰→SBC→GitHub 인기 오픈소스→Hugging Face 인기 모델 순환 심층 리뷰. 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
 ---
 
 # weekly-post
@@ -14,7 +14,7 @@ TechDrop(https://leeyunjai.github.io/) 블로그에 글 1편(한국어·영어 �
 
 | 인자 | 요일 | 모드 | 글 성격 |
 |---|---|---|---|
-| `new` | 월(1)·화(2)·수(3) | **신제품 모드** | 이번 주 IT 신제품 3~5개, 국내/해외 분리 |
+| `new` | 월(1)·화(2)·수(3) | **신제품 모드** | 이번 주 IT 신제품 3~5개(국내/해외) + 소프트웨어 1~2개 |
 | `deep` | 목(4)·금(5)·토(6)·일(7) | **심층 리뷰 모드** | 한 카테고리를 골라 깊게 |
 
 심층 리뷰 카테고리는 다음 순서로 순환한다.
@@ -48,6 +48,12 @@ WebFetch는 원문 확인이 꼭 필요할 때만 쓰고, 차단되면 검색 �
 - **국내(Korea)**: 한국 제조사 제품이거나 이번 주 한국에 정식 출시·출시 발표된 제품. 가격은 원화(출하가).
 - **해외(Global)**: 그 외. 가격은 발표 통화(USD/EUR 등) 그대로. 원화 환산 금지.
 - 국내 소식이 없으면 국내 섹션에 "이번 주 국내 출시 소식은 확인되지 않았습니다." / "No Korean launches were confirmed this week." 한 줄만 쓴다. 억지로 채우지 않는다.
+
+**소프트웨어(Software) 섹션을 하나 더 둔다.** 이번 주 Hugging Face 인기 모델 또는 GitHub 인기 오픈소스 중 **1~2개**.
+- 고르는 법: https://huggingface.co/models?sort=trending , https://github.com/trending (weekly). 최근 30일 내 공개·큰 릴리스·스타 급증한 것만.
+- 임베디드/로보틱스/온디바이스 AI/컴퓨터 비전/개발 도구를 우선한다.
+- 각 항목: 링크(모델 카드 또는 저장소), 제작 조직, 라이선스, 크기(파라미터 수 또는 스타 수), 무엇을 하는지 2~3문장, 설치·실행 한 줄(README/모델 카드에서 확인한 것만), 의견 1~2줄.
+- 하드웨어 제품(3~5개)과는 별도로 센다. 검색 6회 중 1~2회를 여기에 쓴다.
 
 ### 2-2. 심층 리뷰 모드 (노트북 / 스마트폰 / SBC)
 
@@ -140,8 +146,17 @@ tags·categories는 영문으로 통일한다(두 언어의 태그 페이지가 
 ### {Product name}
 ...
 
+## Software
+### {Model or repo name}
+{1-2 sentences of context}
+- Org / License / Size (params or stars)
+- Install or run: `one line from README or model card`
+- Take: {1~2 lines}
+- Source: [Hugging Face or GitHub](URL)
+
 ## This Week at a Glance
 | Product | Category | Region | Key specs | Price | Release |
+(소프트웨어 행은 Region을 "Software", Price를 라이선스로 적는다)
 ```
 
 ### 신제품 모드 구조 (.ko.md)
@@ -161,8 +176,17 @@ tags·categories는 영문으로 통일한다(두 언어의 태그 페이지가 
 ### {제품명}
 ...
 
+## 소프트웨어
+### {모델명 또는 저장소명}
+{맥락 1~2문장}
+- 제작 / 라이선스 / 크기(파라미터 수 또는 스타 수)
+- 설치·실행: `README 또는 모델 카드의 한 줄`
+- 의견: {1~2줄}
+- 출처: [Hugging Face 또는 GitHub](URL)
+
 ## 이번 주 요약
 | 제품 | 카테고리 | 지역 | 핵심 스펙 | 가격 | 출시일 |
+(소프트웨어 행은 지역을 "소프트웨어", 가격을 라이선스로 적는다)
 ```
 
 ### 심층 리뷰 모드 구조
