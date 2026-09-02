@@ -9,12 +9,6 @@
 /* header mark sits with the wordmark, not above it */
 .logo a svg { border-radius: 0; margin-inline-end: 1px; }
 
-/* topic links on the home page */
-.td-topics a { display: inline-flex; align-items: center; gap: 7px; }
-.td-topics a .icon { opacity: .55; transition: opacity .15s; }
-.td-topics a:hover .icon { opacity: 1; }
-.td-pub { display: inline-flex; align-items: center; gap: 6px; }
-.td-pub .icon { opacity: .7; }
 
 /* prev / next */
 .paginav .title { display: inline-flex; align-items: center; gap: 4px; }

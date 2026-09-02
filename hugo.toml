@@ -65,14 +65,8 @@ buildExpired = false
     iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5.3" fill="#2f6fed"/><path fill="#fff" fill-rule="evenodd" d="M6.6 5.6H11.4a6.4 6.4 0 0 1 0 12.8H6.6Z M9.6 8.6H11.4a3.4 3.4 0 0 1 0 6.8H9.6Z"/></svg>'
     iconHeight = 22
 
-  [[params.socialIcons]]
-    name = "github"
-    title = "GitHub"
-    url = "https://github.com/leeyunjai"
-  [[params.socialIcons]]
-    name = "rss"
-    title = "RSS"
-    url = "/index.xml"
+  # 링크 공유 시 기본 미리보기 이미지 (글에 cover.image가 없을 때)
+  images = ["og-default.png"]
 
   [params.fuseOpts]
     isCaseSensitive = false
@@ -94,6 +88,14 @@ buildExpired = false
       [languages.ko.params.homeInfoParams]
         Title = "새로 나온 것만, 출처 있는 것만."
         Content = "노트북부터 로봇까지, 저장소부터 모델까지. 스펙도 가격도 출처와 함께."
+    [[languages.ko.params.socialIcons]]
+      name = "github"
+      title = "GitHub"
+      url = "https://github.com/leeyunjai"
+    [[languages.ko.params.socialIcons]]
+      name = "rss"
+      title = "RSS"
+      url = "/index.xml"
     [languages.ko.params.footer]
       text = "[소개](/about/) · [개인정보처리방침](/privacy/) · [문의](mailto:leeyunjai1982@gmail.com)"
     [languages.ko.menu]
@@ -133,6 +135,14 @@ buildExpired = false
       [languages.en.params.homeInfoParams]
         Title = "Just launched, fully sourced."
         Content = "From laptops to robots, from repositories to models. Specs and prices, always with a source."
+    [[languages.en.params.socialIcons]]
+      name = "github"
+      title = "GitHub"
+      url = "https://github.com/leeyunjai"
+    [[languages.en.params.socialIcons]]
+      name = "rss"
+      title = "RSS"
+      url = "/en/index.xml"
     [languages.en.params.footer]
       text = "[About](/en/about/) · [Privacy](/en/privacy/) · [Contact](mailto:leeyunjai1982@gmail.com)"
     [languages.en.menu]

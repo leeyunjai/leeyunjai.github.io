@@ -1,0 +1,4 @@
+- id: read_time
+  translation:
+    one: "1분"
+    other: "{{ .Count }}분"

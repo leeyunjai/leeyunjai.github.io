@@ -8,13 +8,16 @@ body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSy
 .td-headline { font-size: 34px; line-height: 1.3; font-weight: 700; letter-spacing: -0.03em; margin: 0 0 12px; color: var(--primary); }
 .td-lede { font-size: 17px; line-height: 1.7; color: var(--secondary); max-width: 46ch; margin: 0 0 18px; word-break: keep-all; }
 .td-meta-row { display: flex; align-items: center; gap: 4px; margin-bottom: 20px; font-size: 13px; color: var(--secondary); }
-.td-pub { padding-right: 10px; margin-right: 6px; border-right: 1px solid var(--border); }
+.td-pub { display: inline-flex; align-items: center; gap: 6px; padding-right: 10px; margin-right: 6px; border-right: 1px solid var(--border); }
+.td-pub .icon { opacity: .7; }
 .td-meta-row .social-icons { padding: 0; }
 .td-meta-row .social-icons a { padding: 0 6px; }
 .td-meta-row .social-icons a svg { height: 18px; width: 18px; }
 .td-topics { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.td-topics a { display: inline-block; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--primary); transition: border-color .15s, background .15s; }
+.td-topics a { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--primary); transition: border-color .15s, background .15s; }
 .td-topics a:hover { border-color: var(--primary); background: var(--code-bg); }
+.td-topics a .icon { opacity: .55; transition: opacity .15s; }
+.td-topics a:hover .icon { opacity: 1; }
 .td-topic-soon { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px dashed var(--border); border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--tertiary); cursor: default; }
 .td-topic-soon .icon { opacity: .4; }
 

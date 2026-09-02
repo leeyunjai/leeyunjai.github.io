@@ -1,0 +1,22 @@
+/* Single post: sized for Korean body text, calmer than PaperMod's defaults */
+.post-single .post-title { font-size: 32px; line-height: 1.35; letter-spacing: -0.02em; word-break: keep-all; }
+.post-single .post-meta { margin-top: 10px; }
+.post-content { font-size: 17px; line-height: 1.8; word-break: keep-all; }
+.post-content h2 { font-size: 25px; line-height: 1.35; letter-spacing: -0.02em; margin: 44px 0 14px; }
+.post-content h3 { font-size: 20px; line-height: 1.4; margin: 32px 0 10px; }
+.post-content p, .post-content ul, .post-content ol { margin-bottom: 1.1em; }
+.post-content li { margin-bottom: .3em; }
+.post-content table { font-size: 15px; line-height: 1.55; }
+.post-content table th { font-weight: 600; color: var(--primary); }
+.post-content table td { color: var(--content); }
+.post-content blockquote { border-inline-start: 3px solid var(--td-accent); color: var(--secondary); }
+.post-content a { color: var(--primary); text-decoration: underline; text-decoration-color: var(--tertiary); text-underline-offset: 3px; }
+.post-content a:hover { text-decoration-color: var(--td-accent); color: var(--td-accent); }
+.post-tags li { margin: 0 6px 6px 0; }
+.post-tags a { font-size: 12px; padding: 4px 10px; }
+.toc { font-size: 14px; }
+@media (max-width: 640px) {
+  .post-single .post-title { font-size: 26px; }
+  .post-content { font-size: 16px; line-height: 1.75; }
+  .post-content h2 { font-size: 22px; }
+}
