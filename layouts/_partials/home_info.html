@@ -20,8 +20,12 @@
     <ul class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">
         {{- range $cats }}
         {{- $p := site.GetPage (printf "/tags/%s" .tag) }}
-        {{- $href := cond (ne $p nil) (cond (ne $p nil) $p.RelPermalink "") ("/tags/" | relLangURL) }}
-        <li><a href="{{ $href }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ if $ko }}{{ .ko }}{{ else }}{{ .en }}{{ end }}</span></a></li>
+        {{- $label := cond $ko .ko .en }}
+        {{- if $p }}
+        <li><a href="{{ $p.RelPermalink }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span></a></li>
+        {{- else }}
+        <li><span class="td-topic-soon" title="{{ if $ko }}아직 글이 없습니다{{ else }}No posts yet{{ end }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span></span></li>
+        {{- end }}
         {{- end }}
     </ul>
 </section>

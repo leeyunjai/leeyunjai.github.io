@@ -8,7 +8,7 @@
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
   <h1>
-    {{ .Title }}
+    {{ if eq .Kind "term" }}{{ partial "term_label.html" .Title }}{{ else }}{{ .Title }}{{ end }}
     {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
     {{- with .OutputFormats.Get "rss" }}
     <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
@@ -64,17 +64,14 @@
 {{- end }}
 
 {{- $cat := index (.Params.categories | default (slice "")) 0 }}
-{{- $ko := eq site.Language.Lang "ko" }}
-{{- $catKo := dict "Deep Dive" "심층 리뷰" "Dev Picks" "개발자 픽" "Weekly Brief" "이번 주 브리핑" }}
-{{- $tagKo := dict "Laptop" "노트북" "Smartphone" "스마트폰" "Home Appliance" "가전" "Wearable" "웨어러블" "SBC" "SBC" "Robot" "로봇" "AI Device" "AI 기기" "GitHub" "오픈소스" "Hugging Face" "AI 모델" "Korea" "국내" "Global" "해외" }}
 <article class="{{ $class }} td-card">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     {{- if $cat }}
-    {{- $parts := slice (cond $ko (index $catKo $cat | default $cat) $cat) }}
+    {{- $parts := slice (partial "term_label.html" $cat) }}
     {{- range first 2 (.Params.tags | default slice) }}
-      {{- $parts = $parts | append (cond $ko (index $tagKo . | default .) .) }}
+      {{- $parts = $parts | append (partial "term_label.html" .) }}
     {{- end }}
     <p class="td-kicker">{{ delimit $parts " · " }}</p>
     {{- end }}

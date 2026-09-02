@@ -15,6 +15,8 @@ body { font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSy
 .td-topics { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .td-topics a { display: inline-block; padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--primary); transition: border-color .15s, background .15s; }
 .td-topics a:hover { border-color: var(--primary); background: var(--code-bg); }
+.td-topic-soon { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px dashed var(--border); border-radius: 6px; font-size: 13px; font-weight: 500; color: var(--tertiary); cursor: default; }
+.td-topic-soon .icon { opacity: .4; }
 
 /* section title */
 .td-section { font-size: 13px; font-weight: 600; letter-spacing: .06em; color: var(--secondary); margin: 0 0 6px; padding-bottom: 10px; border-bottom: 1px solid var(--primary); }
