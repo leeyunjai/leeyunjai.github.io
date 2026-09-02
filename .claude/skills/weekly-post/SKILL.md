@@ -1,6 +1,6 @@
 ---
 name: weekly-post
-description: DigitalBrain 블로그 글 자동 작성. 평일 하루 한 편. 인자 hw1(월)·hw2(화)는 노트북·스마트폰·가전·웨어러블 공통 풀에서 고르고, embedded(수 SBC·개발 보드·로봇), dev(목 GitHub 인기 오픈소스/Hugging Face 인기 모델 격주), brief(금 이번 주 브리핑). 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
+description: DigitalBrain 블로그 글 자동 작성. 평일 하루 한 편이며 오늘 요일이 모드를 결정한다(월 hw1·화 hw2 하드웨어 공통 풀, 수 embedded SBC·로봇, 목 dev GitHub/Hugging Face 격주, 금 brief 주간 브리핑). 프롬프트의 인자보다 요일이 우선하고, 토·일은 즉시 종료한다. 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
 ---
 
 # weekly-post
@@ -8,17 +8,39 @@ description: DigitalBrain 블로그 글 자동 작성. 평일 하루 한 편. �
 DigitalBrain(https://leeyunjai.github.io/)에 글 1편(한국어·영어 파일 각 1개)을 작성해 main에 커밋·푸시한다.
 평일 하루 한 편이다.
 
-## 0. 모드
+## 0. 모드 — 요일이 결정한다
 
-인자로 모드를 받는다. 인자가 없으면 `TZ=Asia/Seoul date +%u` 로 요일을 보고 아래 표에서 고른다.
+**오늘이 무슨 요일인지로 모드를 정한다. 프롬프트에 적힌 인자보다 요일이 우선한다.**
 
-| 인자 | 요일 | 다루는 것 | categories |
+```bash
+TZ=Asia/Seoul date +%u   # 1=월 ... 7=일
+```
+
+| 요일 | 모드 | 다루는 것 | categories |
 |---|---|---|---|
-| `hw1` | 월(1) | **하드웨어 공통 풀**에서 1개를 깊게 | `["Deep Dive"]` |
-| `hw2` | 화(2) | **하드웨어 공통 풀**에서 1개를 깊게. 월요일과 다른 제품군 | `["Deep Dive"]` |
-| `embedded` | 수(3) | SBC·개발 보드·로봇 1~2개를 깊게 | `["Deep Dive"]` |
-| `dev` | 목(4) | GitHub 인기 오픈소스 **또는** Hugging Face 인기 모델 2~3개 | `["Dev Picks"]` |
-| `brief` | 금(5) | 이번 주 브리핑. 국내 / 해외 / 소프트웨어 | `["Weekly Brief"]` |
+| 월(1) | `hw1` | **하드웨어 공통 풀**에서 1개를 깊게 | `["Deep Dive"]` |
+| 화(2) | `hw2` | **하드웨어 공통 풀**에서 1개를 깊게. 어제와 다른 제품군 | `["Deep Dive"]` |
+| 수(3) | `embedded` | SBC·개발 보드·로봇 1~2개를 깊게 | `["Deep Dive"]` |
+| 목(4) | `dev` | GitHub 인기 오픈소스 **또는** Hugging Face 인기 모델 2~3개 | `["Dev Picks"]` |
+| 금(5) | `brief` | 이번 주 브리핑. 국내 / 해외 / 소프트웨어 | `["Weekly Brief"]` |
+
+### 인자보다 요일이 우선하는 이유
+
+예약 실행(Routine)은 **매일 03:00에 도는 것 하나뿐**이고, 그 프롬프트에는 `hw1`이 적혀 있다.
+그대로 따르면 매일 월요일용 글만 쓰게 된다. 그래서 **프롬프트의 인자는 무시하고 오늘 요일로 정한다.**
+
+예: 프롬프트에 `hw1`이라 적혀 있어도 오늘이 목요일이면 `dev` 모드로 쓴다.
+
+예외는 하나다. 사람이 대화 중에 직접 `/weekly-post dev` 처럼 불렀을 때만 그 인자를 따른다.
+
+### 토·일은 아무것도 하지 않는다
+
+`date +%u` 가 6 또는 7이면 **즉시 종료한다.** 검색도, 파일 읽기도, runlog 작성도 하지 않는다.
+"오늘은 주말이라 발행하지 않습니다" 한 줄만 답하고 끝낸다. 예약 실행이 매일 돌기 때문에
+주말 두 번은 여기서 바로 빠져나가야 비용이 들지 않는다.
+
+**`dev`는 GitHub와 Hugging Face를 격주로 번갈아 간다.** `ls content/posts` 에서 `dev-` 로 시작하는
+가장 최근 글의 tags를 보고 반대쪽을 고른다. 이전 dev 글이 없으면 GitHub부터.
 
 ### 하드웨어 공통 풀 (`hw1` / `hw2`)
 
