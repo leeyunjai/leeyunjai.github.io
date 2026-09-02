@@ -1,6 +1,5 @@
 ---
 title: "About"
-url: "/about/"
 summary: "About the TechDrop blog"
 ShowToc: false
 ShowBreadCrumbs: false

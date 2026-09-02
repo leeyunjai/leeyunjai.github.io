@@ -27,7 +27,8 @@ TechDrop(https://leeyunjai.github.io/) 블로그에 글 1편(한국어·영어 �
 ## 1. 작성 전 준비 (필수)
 
 1. `git fetch origin main && git checkout main && git pull origin main` 으로 최신 상태를 맞춘다.
-2. 오늘 날짜를 `TZ=Asia/Seoul date +%F` 로 확인한다.
+2. 오늘 날짜와 현재 시각을 `TZ=Asia/Seoul date +%FT%T+09:00` 로 확인한다. front matter `date`는 이 값(현재 시각)을 쓴다.
+   **미래 시각 금지.** `buildFuture = false` 라서 빌드 시점보다 미래인 글은 사이트에서 빠진다.
 3. **`ls content/posts` 로 최근 30일 파일명만 확인한다. 본문은 읽지 않는다.**
    파일명(slug)에 들어간 제품·프로젝트 이름과 겹치는 것은 이번 글에서 제외한다.
    (같은 주에 두 번 돌면 제품이 겹칠 수 있다.)
@@ -105,7 +106,7 @@ front matter (YAML, 두 파일 공통 구조):
 ```yaml
 ---
 title: "제목 (해당 언어)"
-date: YYYY-MM-DDTHH:MM:SS+09:00   # 오늘, KST. 두 파일 동일
+date: YYYY-MM-DDTHH:MM:SS+09:00   # 현재 시각(KST). 미래 금지. 두 파일 동일
 slug: "<slug>"                    # 두 파일 동일
 summary: "한 줄 요약 (해당 언어)"
 tags: ["Laptop", "Smartphone", "SBC", "Robot", "AI Device", "GitHub", "Hugging Face", "Korea", "Global"]   # 실제 다룬 것만, 두 파일 동일
@@ -114,6 +115,7 @@ draft: false
 ---
 ```
 
+`url:` 은 쓰지 않는다(언어별 경로가 충돌한다). 경로는 permalinks + slug 로 정해진다.
 tags·categories는 영문으로 통일한다(두 언어의 태그 페이지가 같은 이름으로 묶이도록).
 
 ## 4. 본문

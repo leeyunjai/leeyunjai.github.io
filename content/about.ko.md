@@ -1,6 +1,5 @@
 ---
 title: "소개"
-url: "/about/"
 summary: "TechDrop 블로그 소개"
 ShowToc: false
 ShowBreadCrumbs: false

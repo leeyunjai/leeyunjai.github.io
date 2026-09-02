@@ -68,8 +68,8 @@ buildExpired = false
 
 [languages]
   [languages.ko]
-    languageName = "한국어"
-    languageCode = "ko"
+    label = "한국어"
+    locale = "ko-KR"
     weight = 1
     title = "TechDrop"
     [languages.ko.params]
@@ -102,8 +102,8 @@ buildExpired = false
         weight = 50
 
   [languages.en]
-    languageName = "English"
-    languageCode = "en"
+    label = "English"
+    locale = "en-US"
     weight = 2
     title = "TechDrop"
     [languages.en.params]

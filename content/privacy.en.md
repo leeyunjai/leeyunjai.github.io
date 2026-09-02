@@ -1,6 +1,5 @@
 ---
 title: "Privacy Policy"
-url: "/privacy/"
 summary: "Privacy policy for the TechDrop blog"
 ShowToc: true
 ShowBreadCrumbs: false

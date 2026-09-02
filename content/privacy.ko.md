@@ -1,6 +1,5 @@
 ---
 title: "개인정보처리방침"
-url: "/privacy/"
 summary: "TechDrop 블로그의 개인정보처리방침"
 ShowToc: true
 ShowBreadCrumbs: false
