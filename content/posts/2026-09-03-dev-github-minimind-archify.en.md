@@ -5,10 +5,6 @@ slug: "dev-github-minimind-archify"
 summary: "Two developer repositories from this week's GitHub trending: MiniMind, which trains a 64M-parameter language model from scratch on one GPU, and Archify, an agent skill that turns a system description into a verifiable architecture diagram. Licenses and install commands included."
 tags: ["GitHub", "Global"]
 categories: ["Dev Picks"]
-cover:
-  image: "/images/posts/dev-github-minimind-archify.en.png"
-  alt: "This week's dev picks: MiniMind 57.7k stars, Archify +25.5k stars this week, 64M parameters, about 2 hours to train"
-  relative: false
 draft: false
 ---
 

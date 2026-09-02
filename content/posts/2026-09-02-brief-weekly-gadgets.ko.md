@@ -5,10 +5,6 @@ slug: "brief-weekly-gadgets"
 summary: "같은 날 출시된 국내 실속형 14형 노트북 2종, NVIDIA 차세대 보급형 Jetson, 가격이 오른 Poco F9 시리즈를 정리했습니다."
 tags: ["Laptop", "SBC", "Smartphone", "GitHub", "Korea", "Global"]
 categories: ["Weekly Brief"]
-cover:
-  image: "/images/posts/brief-weekly-gadgets.ko.png"
-  alt: "이번 주 브리핑: 그램북 AI 14, 뉴 갤럭시 북6, Jetson Orin Nano 2, Poco F9 Pro 핵심 수치"
-  relative: false
 draft: false
 ---
 9월 첫째 주는 애플 9월 9일 행사와 IFA 베를린을 앞둔 조용한 주였지만, 눈에 띄는 제품이 네 가지 있었습니다. 국내에서는 LG전자와 삼성전자가 같은 날 실속형 14형 노트북을 출시했습니다. 해외에서는 NVIDIA가 로봇용 보급형 Jetson을 새로 내놓았고, Poco는 가격이 꽤 오른 F9 시리즈를 발표했습니다.

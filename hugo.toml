@@ -50,12 +50,6 @@ buildExpired = false
   # Google Analytics 4 measurement ID (예: "G-XXXXXXXXXX")
   googleAnalytics = ""
 
-  [params.cover]
-    hiddenInList = true       # 목록은 글자 위주로. 커버는 본문 상단과 공유 미리보기(OG)에만.
-    hiddenInSingle = false
-    responsiveImages = false
-    linkFullImages = false
-
   [params.assets]
     disableHLJS = false
     disableFingerprinting = true

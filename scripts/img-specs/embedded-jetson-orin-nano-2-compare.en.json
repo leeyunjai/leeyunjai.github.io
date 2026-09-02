@@ -1,3 +1,0 @@
-{"title":"Orin Nano 2 vs Orin Nano Super","a":"Orin Nano 2 (new)","b":"Orin Nano Super (current)",
- "rows":[{"label":"AI compute (TOPS)","a":78,"b":67},{"label":"CUDA cores","a":1536,"b":1024},{"label":"Memory bandwidth (GB/s)","a":120,"b":102},{"label":"Max power (W)","a":40,"b":25},{"label":"Min power (W)","a":15,"b":7}],
- "note":"Sources: NVIDIA Newsroom, Hackster.io, NVIDIA developer kit specs"}

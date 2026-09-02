@@ -5,10 +5,6 @@ slug: "dev-github-minimind-archify"
 summary: "이번 주 GitHub 주간 트렌딩에서 고른 개발자용 오픈소스 두 개. 64M 파라미터 언어모델을 GPU 한 장으로 직접 학습시키는 MiniMind, 시스템 설명을 아키텍처 다이어그램으로 바꿔 주는 에이전트 스킬 Archify를 라이선스·설치 명령과 함께 정리했습니다."
 tags: ["GitHub", "Global"]
 categories: ["Dev Picks"]
-cover:
-  image: "/images/posts/dev-github-minimind-archify.ko.png"
-  alt: "이번 주 개발자 픽: MiniMind 57.7k 스타, Archify 이번 주 +25.5k 스타, 64M 파라미터, 학습 약 2시간"
-  relative: false
 draft: false
 ---
 

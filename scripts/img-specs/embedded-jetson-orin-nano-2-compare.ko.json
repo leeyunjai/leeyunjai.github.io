@@ -1,3 +1,0 @@
-{"title":"Orin Nano 2 vs Orin Nano Super","a":"Orin Nano 2 (신형)","b":"Orin Nano Super (현행)",
- "rows":[{"label":"AI 연산 (TOPS)","a":78,"b":67},{"label":"CUDA 코어","a":1536,"b":1024},{"label":"메모리 대역폭 (GB/s)","a":120,"b":102},{"label":"최대 전력 (W)","a":40,"b":25},{"label":"최소 전력 (W)","a":15,"b":7}],
- "note":"출처: NVIDIA Newsroom, Hackster.io, NVIDIA 개발자 키트 사양"}
