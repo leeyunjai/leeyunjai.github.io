@@ -1,0 +1,14 @@
+# 홈 칩과 /tags/ 페이지가 모두 이 파일을 읽습니다. 순서가 곧 표시 순서입니다.
+# term 은 글 front matter 의 tags 값과 정확히 같아야 합니다.
+topics:
+  - { term: "Laptop",         ko: "노트북",   en: "Laptops",     icon: "laptop" }
+  - { term: "Smartphone",     ko: "스마트폰", en: "Phones",      icon: "smartphone" }
+  - { term: "Home Appliance", ko: "가전",     en: "Appliances",  icon: "plug" }
+  - { term: "Wearable",       ko: "웨어러블", en: "Wearables",   icon: "watch" }
+  - { term: "SBC",            ko: "SBC",      en: "SBCs",        icon: "cpu" }
+  - { term: "Robot",          ko: "로봇",     en: "Robots",      icon: "bot" }
+  - { term: "GitHub",         ko: "오픈소스", en: "Open source", icon: "git" }
+  - { term: "Hugging Face",   ko: "AI 모델",  en: "AI models",   icon: "sparkles" }
+regions:
+  - { term: "Korea",  ko: "국내", en: "Korea",  icon: "map-pin" }
+  - { term: "Global", ko: "해외", en: "Global", icon: "globe" }

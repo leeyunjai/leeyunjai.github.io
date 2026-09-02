@@ -1,15 +1,5 @@
 {{- with site.Params.homeInfoParams }}
 {{- $ko := eq site.Language.Lang "ko" }}
-{{- $cats := slice
-  (dict "tag" "laptop"       "ko" "노트북"   "en" "Laptops"     "icon" "laptop")
-  (dict "tag" "smartphone"   "ko" "스마트폰" "en" "Phones"      "icon" "smartphone")
-  (dict "tag" "home-appliance" "ko" "가전"   "en" "Appliances"  "icon" "plug")
-  (dict "tag" "wearable"     "ko" "웨어러블" "en" "Wearables"   "icon" "watch")
-  (dict "tag" "sbc"          "ko" "SBC"      "en" "SBCs"        "icon" "cpu")
-  (dict "tag" "robot"        "ko" "로봇"     "en" "Robots"      "icon" "bot")
-  (dict "tag" "github"       "ko" "오픈소스" "en" "Open source" "icon" "git")
-  (dict "tag" "hugging-face" "ko" "AI 모델"  "en" "AI models"   "icon" "sparkles")
-}}
 <section class="td-intro">
     <h1 class="td-headline">{{ .Title | markdownify }}</h1>
     <p class="td-lede">{{ .Content | markdownify }}</p>
@@ -17,17 +7,7 @@
         <span class="td-pub">{{ partial "icon.html" (dict "name" "calendar" "size" 14) }}{{ if $ko }}평일 매일 발행{{ else }}New post every weekday{{ end }}</span>
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </div>
-    <ul class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">
-        {{- range $cats }}
-        {{- $p := site.GetPage (printf "/tags/%s" .tag) }}
-        {{- $label := cond $ko .ko .en }}
-        {{- if $p }}
-        <li><a href="{{ $p.RelPermalink }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span></a></li>
-        {{- else }}
-        <li><span class="td-topic-soon" title="{{ if $ko }}아직 글이 없습니다{{ else }}No posts yet{{ end }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span></span></li>
-        {{- end }}
-        {{- end }}
-    </ul>
+    {{ partial "topic_chips.html" (dict "showCount" false) }}
 </section>
 <h2 class="td-section">{{ if $ko }}최신 글{{ else }}Latest{{ end }}</h2>
 {{- end -}}

@@ -1,0 +1,23 @@
+{{- /* 홈과 /tags/ 가 함께 쓰는 태그 칩. data/topics.yaml 순서대로, 글이 없는 태그는 비활성.
+       {{ partial "topic_chips.html" (dict "showCount" true) }} */ -}}
+{{- $ko := eq site.Language.Lang "ko" }}
+{{- $showCount := .showCount | default false }}
+{{- $groups := slice
+     (dict "label" (cond $ko "주제" "Topics") "items" site.Data.topics.topics)
+     (dict "label" (cond $ko "지역" "Region") "items" site.Data.topics.regions) }}
+{{- range $groups }}
+<div class="td-chip-group">
+  <span class="td-chip-label">{{ .label }}</span>
+  <ul class="td-topics" aria-label="{{ .label }}">
+  {{- range .items }}
+    {{- $p := site.GetPage (printf "/tags/%s" (urlize .term)) }}
+    {{- $label := cond $ko .ko .en }}
+    {{- if $p }}
+    <li><a href="{{ $p.RelPermalink }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span>{{ if $showCount }}<sup class="td-count">{{ len $p.RegularPages }}</sup>{{ end }}</a></li>
+    {{- else }}
+    <li><span class="td-topic-soon" title="{{ if $ko }}아직 글이 없습니다{{ else }}No posts yet{{ end }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ $label }}</span></span></li>
+    {{- end }}
+  {{- end }}
+  </ul>
+</div>
+{{- end }}
