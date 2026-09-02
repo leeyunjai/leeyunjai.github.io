@@ -1,0 +1,147 @@
+baseURL = "https://leeyunjai.github.io/"
+title = "TechDrop"
+theme = "PaperMod"
+
+defaultContentLanguage = "ko"
+defaultContentLanguageInSubdir = false
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = "/:year/:month/:day/:slug/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  disableLangToggle = false
+
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  hideSummary = false
+  disableSpecial1stPost = true
+  disableScrollToTop = false
+
+  # Google AdSense publisher ID (예: "ca-pub-XXXXXXXXXXXXXXXX")
+  # 승인 전에는 빈 값으로 두면 스크립트가 삽입되지 않습니다.
+  adsense = ""
+
+  # Google Analytics 4 measurement ID (예: "G-XXXXXXXXXX")
+  googleAnalytics = ""
+
+  [params.assets]
+    disableHLJS = false
+    disableFingerprinting = false
+
+  [params.label]
+    text = "TechDrop"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[languages]
+  [languages.ko]
+    languageName = "한국어"
+    languageCode = "ko"
+    weight = 1
+    title = "TechDrop"
+    [languages.ko.params]
+      description = "매주 새로 나온 IT 기기와 개발 오픈소스를 정리하는 블로그"
+    [languages.ko.menu]
+      [[languages.ko.menu.main]]
+        identifier = "posts"
+        name = "글목록"
+        url = "/posts/"
+        weight = 10
+      [[languages.ko.menu.main]]
+        identifier = "archives"
+        name = "아카이브"
+        url = "/archives/"
+        weight = 20
+      [[languages.ko.menu.main]]
+        identifier = "tags"
+        name = "태그"
+        url = "/tags/"
+        weight = 30
+      [[languages.ko.menu.main]]
+        identifier = "search"
+        name = "검색"
+        url = "/search/"
+        weight = 40
+      [[languages.ko.menu.main]]
+        identifier = "about"
+        name = "소개"
+        url = "/about/"
+        weight = 50
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 2
+    title = "TechDrop"
+    [languages.en.params]
+      description = "Weekly roundup of new tech gadgets and developer open source"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/en/posts/"
+        weight = 10
+      [[languages.en.menu.main]]
+        identifier = "archives"
+        name = "Archives"
+        url = "/en/archives/"
+        weight = 20
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/en/tags/"
+        weight = 30
+      [[languages.en.menu.main]]
+        identifier = "search"
+        name = "Search"
+        url = "/en/search/"
+        weight = 40
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/en/about/"
+        weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "monokai"

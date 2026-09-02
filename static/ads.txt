@@ -1,0 +1,6 @@
+# ads.txt for https://leeyunjai.github.io/
+#
+# AdSense 승인 후 아래 형식으로 한 줄을 추가하세요.
+# pub-XXXXXXXXXXXXXXXX 부분은 hugo.toml [params] adsense 값("ca-pub-..." 에서 "ca-" 제외)과 같습니다.
+#
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,14 @@
+{{- /* Google AdSense: hugo.toml [params] adsense 값이 비어있지 않을 때만 삽입 */ -}}
+{{- with site.Params.adsense }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{- end }}
+{{- /* Google Analytics 4: hugo.toml [params] googleAnalytics 값이 비어있지 않을 때만 삽입 */ -}}
+{{- with site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}', { 'anonymize_ip': true });
+</script>
+{{- end }}
