@@ -66,19 +66,17 @@
 {{- $cat := index (.Params.categories | default (slice "")) 0 }}
 {{- $catKey := cond (eq $cat "Deep Dive") "deep" (cond (eq $cat "Weekly New Gadgets") "weekly" "other") }}
 {{- $ko := eq site.Language.Lang "ko" }}
-<article class="{{ $class }} td-card" data-cat="{{ $catKey }}">
+<article class="{{ $class }} td-card">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     {{- if $cat }}
-    <div class="td-card-meta">
-      <span class="td-badge td-badge-{{ $catKey }}">
-        {{- if eq $catKey "weekly" }}{{ if $ko }}주간 신제품{{ else }}Weekly{{ end }}
-        {{- else if eq $catKey "deep" }}{{ if $ko }}심층 리뷰{{ else }}Deep Dive{{ end }}
-        {{- else }}{{ $cat }}{{ end -}}
-      </span>
-      {{- range first 4 (.Params.tags | default slice) }}<span class="td-tag">{{ . }}</span>{{ end }}
-    </div>
+    <p class="td-kicker">
+      {{- if eq $catKey "weekly" }}{{ if $ko }}주간 신제품{{ else }}Weekly{{ end }}
+      {{- else if eq $catKey "deep" }}{{ if $ko }}심층 리뷰{{ else }}Deep dive{{ end }}
+      {{- else }}{{ $cat }}{{ end -}}
+      {{- with .Params.tags }} · {{ delimit (first 3 .) " · " }}{{ end -}}
+    </p>
     {{- end }}
     <h2 class="entry-hint-parent">
       {{- .Title }}
