@@ -19,3 +19,9 @@ git clone --recurse-submodules https://github.com/leeyunjai/leeyunjai.github.io.
 cd leeyunjai.github.io
 hugo server -D
 ```
+
+## 배포 설정 (GitHub)
+
+- Default branch: `main`
+- Settings → Pages → Source: **GitHub Actions**
+- Settings → Environments → `github-pages` → Deployment branches: `main` 허용
