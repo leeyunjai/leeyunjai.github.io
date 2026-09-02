@@ -1,5 +1,5 @@
 baseURL = "https://leeyunjai.github.io/"
-title = "TechDrop"
+title = "DigitalBrain"
 theme = "PaperMod"
 
 defaultContentLanguage = "ko"
@@ -55,7 +55,7 @@ buildExpired = false
     disableFingerprinting = true
 
   [params.label]
-    text = "TechDrop"
+    text = "DigitalBrain"
 
   [[params.socialIcons]]
     name = "github"
@@ -80,7 +80,7 @@ buildExpired = false
     label = "한국어"
     locale = "ko-KR"
     weight = 1
-    title = "TechDrop"
+    title = "DigitalBrain"
     [languages.ko.params]
       description = "매주 새로 나온 IT 기기와 개발 오픈소스를 정리하는 블로그"
       [languages.ko.params.homeInfoParams]
@@ -119,7 +119,7 @@ buildExpired = false
     label = "English"
     locale = "en-US"
     weight = 2
-    title = "TechDrop"
+    title = "DigitalBrain"
     [languages.en.params]
       description = "Weekly roundup of new tech gadgets and developer open source"
       [languages.en.params.homeInfoParams]

@@ -1,14 +1,14 @@
 ---
 title: "About"
-summary: "About the TechDrop blog"
+summary: "About the DigitalBrain blog"
 ShowToc: false
 ShowBreadCrumbs: false
 ShowReadingTime: false
 ---
 
-## TechDrop
+## DigitalBrain
 
-TechDrop is a weekly roundup of newly announced tech hardware (laptops, smartphones, single-board computers, robots, AI devices) and notable developer open source projects, with the key specs, prices, and release dates in one place.
+DigitalBrain is a weekly roundup of newly announced tech hardware (laptops, smartphones, single-board computers, robots, AI devices) and notable developer open source projects, with the key specs, prices, and release dates in one place.
 
 - Only products and projects that were actually announced are covered, and every entry links to its source.
 - Specs follow the manufacturer's official figures. Anything unconfirmed is marked "TBC".

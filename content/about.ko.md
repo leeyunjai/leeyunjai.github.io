@@ -1,12 +1,12 @@
 ---
 title: "소개"
-summary: "TechDrop 블로그 소개"
+summary: "DigitalBrain 블로그 소개"
 ShowToc: false
 ShowBreadCrumbs: false
 ShowReadingTime: false
 ---
 
-## TechDrop
+## DigitalBrain
 
 매주 새로 발표된 IT 기기(노트북, 스마트폰, SBC, 로봇, AI 기기)와 개발자용 오픈소스 프로젝트를 골라 핵심 스펙, 가격, 출시일을 정리하는 블로그입니다.
 

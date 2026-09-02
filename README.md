@@ -1,4 +1,4 @@
-# TechDrop
+# DigitalBrain
 
 Hugo + PaperMod 한/영 기술 블로그. https://leeyunjai.github.io/
 

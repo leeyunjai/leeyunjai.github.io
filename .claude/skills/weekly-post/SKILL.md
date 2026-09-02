@@ -1,11 +1,11 @@
 ---
 name: weekly-post
-description: TechDrop 블로그 주간 글 자동 작성. 인자 new(월요일)는 최근 7일 IT 신제품을 국내/해외/소프트웨어(Hugging Face 인기 모델·GitHub 인기 오픈소스)로 나눠 정리, 인자 deep(목요일)은 노트북→스마트폰→SBC→GitHub 인기 오픈소스→Hugging Face 인기 모델 순환 심층 리뷰. 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
+description: DigitalBrain 블로그 주간 글 자동 작성. 인자 new(월요일)는 최근 7일 IT 신제품을 국내/해외/소프트웨어(Hugging Face 인기 모델·GitHub 인기 오픈소스)로 나눠 정리, 인자 deep(목요일)은 노트북→스마트폰→SBC→GitHub 인기 오픈소스→Hugging Face 인기 모델 순환 심층 리뷰. 조사 1회로 같은 slug의 .ko.md와 .en.md 두 파일을 content/posts/ 에 쓰고 main에 커밋·푸시한다.
 ---
 
 # weekly-post
 
-TechDrop(https://leeyunjai.github.io/) 블로그에 글 1편(한국어·영어 파일 각 1개)을 작성해 main에 커밋·푸시한다.
+DigitalBrain(https://leeyunjai.github.io/) 블로그에 글 1편(한국어·영어 파일 각 1개)을 작성해 main에 커밋·푸시한다.
 일주일에 2편. 요일(또는 인자)에 따라 글 성격이 다르다.
 
 ## 0. 모드 결정

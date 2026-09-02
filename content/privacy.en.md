@@ -1,12 +1,12 @@
 ---
 title: "Privacy Policy"
-summary: "Privacy policy for the TechDrop blog"
+summary: "Privacy policy for the DigitalBrain blog"
 ShowToc: true
 ShowBreadCrumbs: false
 ShowReadingTime: false
 ---
 
-TechDrop ("this site", https://leeyunjai.github.io/) respects your privacy. This policy explains what information is collected when you visit this site, how it is used, and the choices you have.
+DigitalBrain ("this site", https://leeyunjai.github.io/) respects your privacy. This policy explains what information is collected when you visit this site, how it is used, and the choices you have.
 
 ## 1. Information We Collect
 
