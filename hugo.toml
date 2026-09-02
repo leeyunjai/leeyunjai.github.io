@@ -57,6 +57,15 @@ buildExpired = false
   [params.label]
     text = "TechDrop"
 
+  [[params.socialIcons]]
+    name = "github"
+    title = "GitHub"
+    url = "https://github.com/leeyunjai"
+  [[params.socialIcons]]
+    name = "rss"
+    title = "RSS"
+    url = "/index.xml"
+
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
@@ -74,6 +83,9 @@ buildExpired = false
     title = "TechDrop"
     [languages.ko.params]
       description = "매주 새로 나온 IT 기기와 개발 오픈소스를 정리하는 블로그"
+      [languages.ko.params.homeInfoParams]
+        Title = "TechDrop"
+        Content = "매주 새로 나온 노트북·스마트폰·SBC·로봇과 개발자용 오픈소스를 골라, 스펙과 가격을 출처와 함께 정리합니다. 월요일은 이번 주 신제품, 목요일은 한 가지를 깊게 봅니다."
     [languages.ko.menu]
       [[languages.ko.menu.main]]
         identifier = "posts"
@@ -108,6 +120,9 @@ buildExpired = false
     title = "TechDrop"
     [languages.en.params]
       description = "Weekly roundup of new tech gadgets and developer open source"
+      [languages.en.params.homeInfoParams]
+        Title = "TechDrop"
+        Content = "A weekly pick of new laptops, phones, single-board computers, robots, and developer open source, with specs, prices, and sources. Mondays cover the week's launches; Thursdays go deep on one."
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "posts"

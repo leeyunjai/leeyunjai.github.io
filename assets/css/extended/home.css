@@ -1,0 +1,17 @@
+.td-hero { padding: 28px 24px 20px; }
+.td-hero .entry-header h1 { font-size: 34px; letter-spacing: -0.02em; }
+.td-tagline { margin-top: 6px; font-size: 14px; color: var(--secondary); letter-spacing: 0.01em; }
+.td-hero .entry-content { margin: 14px 0 18px; font-size: 15px; line-height: 1.7; }
+.td-cats { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 6px; padding: 0; }
+.td-cat {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 12px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--theme);
+  color: var(--primary); font-size: 13px; font-weight: 500; line-height: 1;
+  transition: border-color .15s, transform .15s;
+}
+.td-cat:hover { border-color: var(--primary); transform: translateY(-1px); }
+.td-cat svg { color: var(--secondary); flex: none; }
+.td-cat:hover svg { color: var(--primary); }
+.post-entry { border-radius: var(--radius); }
+@media (max-width: 500px) { .td-hero { padding: 22px 18px 16px; } .td-hero .entry-header h1 { font-size: 28px; } }
