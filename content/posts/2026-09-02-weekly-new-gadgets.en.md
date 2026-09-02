@@ -55,6 +55,7 @@ NVIDIA's entry-level Jetson has been the default brain for hobby and education r
 - Release: announced Aug 25 (US time); the module and developer kit are expected in the first half of 2027
 - Take: The GPU is still Ampere, so the gain comes from more CUDA cores, two extra CPU cores, and faster memory rather than a new architecture. For an on-device vision robot, 8 GB of shared memory is once again the real ceiling. The new 40 W top mode is the part that affects hardware design: a small robot built around the old 25 W budget needs its power rail and cooling rethought before this module goes in. And with shipping a good six months away, nobody should plan a 2026 build around it.
 - Source: [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai), [Hackster.io](https://www.hackster.io/news/say-hello-to-the-nvidia-jetson-orin-nano-2-68cf1241460f)
+- Going deeper: [SBC Deep Dive: What Actually Changed in the Jetson Orin Nano 2](/en/2026/09/02/sbc-deep-dive-jetson-orin-nano-2/) covers the comparison and the power-design side.
 
 ### Poco F9 Pro and F9 Ultra
 

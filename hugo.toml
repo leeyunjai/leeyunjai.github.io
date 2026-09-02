@@ -53,11 +53,16 @@ buildExpired = false
   [params.assets]
     disableHLJS = false
     disableFingerprinting = true
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+    safari_pinned_tab = "/safari-pinned-tab.svg"
 
   [params.label]
     text = "DigitalBrain"
     # 자체 제작 마크(라이선스 문제 없음). 나머지 아이콘은 Lucide(ISC) 기하를 따릅니다.
-    iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="9" cy="8.8" r="1.5"/><circle cx="15" cy="12" r="1.5"/><circle cx="9" cy="15.2" r="1.5"/><path d="M10.35 9.5 13.65 11.3M13.65 12.7 10.35 14.5"/></svg>'
+    iconSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5.3" fill="#2f6fed"/><path fill="#fff" fill-rule="evenodd" d="M6.6 5.6H11.4a6.4 6.4 0 0 1 0 12.8H6.6Z M9.6 8.6H11.4a3.4 3.4 0 0 1 0 6.8H9.6Z"/></svg>'
     iconHeight = 22
 
   [[params.socialIcons]]
