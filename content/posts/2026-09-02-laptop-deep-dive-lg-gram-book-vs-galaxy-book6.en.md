@@ -48,6 +48,12 @@ Samsung's advantage is the entry price and immediate availability. 1,190,000 KRW
 
 Source: [Money Today](https://www.mt.co.kr/tech/2026/09/01/2026090108110731281), [Herald Business](https://biz.heraldcorp.com/article/10858085), [Samsung Galaxy Book6 store page](https://www.samsung.com/sec/galaxybook/galaxy-book6-series/buy/?modelCode=NT740VJG-KC51G&bcAiscYn=Y)
 
+## What Core Series 3 changes
+
+Both machines run Intel Core Series 3, but that name covers more than one die. LG says its 14-inch uses the Wildcat Lake variant, which is the low-power part built for thin, fanless-leaning designs and long battery life rather than raw multi-core throughput. Samsung has only said "Core Series 3" without naming the die, so the two may not be equal on sustained performance. For office work, browsing, and Python on a small dataset that will not matter. For compiling, running a local vision model, or anything that pins all cores for minutes, it will, and neither company has published a benchmark yet.
+
+The other practical difference is thermals and noise. A 14.9 mm aluminum chassis with a low-power chip usually means a quiet fan or none at all. Samsung has not published thickness for the "New" model, so I cannot compare that directly either.
+
 ## Head to head
 
 | | LG gram Book AI 2026 14 | Samsung New Galaxy Book6 |
@@ -63,6 +69,16 @@ Source: [Money Today](https://www.mt.co.kr/tech/2026/09/01/2026090108110731281),
 **Pick the LG** if you carry the laptop all day and want the longest battery and a LAN port. Robotics and embedded classes that still use wired networks will appreciate not needing a dongle.
 
 **Pick the Samsung** if price is the deciding factor or you need the laptop this week. Two USB-C ports also make it easier to charge and connect a dev board at the same time.
+
+## What to check before buying
+
+Both spec sheets are incomplete, so these are the items I would look for on the retail listing before paying:
+
+- Display: resolution, panel type (IPS or OLED), brightness in nits, and whether the surface is anti-glare. This is the single biggest unknown on both.
+- RAM: whether it is soldered, and whether 8 GB is the floor. 8 GB is tight for Windows 11 plus a browser plus any local AI tool in 2026.
+- SSD: capacity and whether there is a free slot. LG's 15-inch has one spare PCIe 4.0 slot; the 14-inch is unconfirmed.
+- Charging: wattage and whether it charges over USB-C, which decides if one travel charger covers both the laptop and a dev board.
+- Wireless: Wi-Fi 6E or 7, and Bluetooth version, which matter for anyone flashing or debugging boards wirelessly.
 
 ## Verdict
 
