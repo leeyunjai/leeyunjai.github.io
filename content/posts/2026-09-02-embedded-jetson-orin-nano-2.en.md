@@ -1,5 +1,5 @@
 ---
-title: "SBC Deep Dive: What Actually Changed in the Jetson Orin Nano 2"
+title: "Jetson Orin Nano 2: the 2x that isn't"
 date: 2026-09-02T17:40:00+09:00
 slug: "embedded-jetson-orin-nano-2"
 summary: "NVIDIA's next entry-level Jetson compared against the current Orin Nano Super, with a look at the power envelope and memory ceiling that decide whether it fits a robot."

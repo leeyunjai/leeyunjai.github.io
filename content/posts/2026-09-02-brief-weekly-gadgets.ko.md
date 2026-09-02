@@ -1,5 +1,5 @@
 ---
-title: "이번 주 신제품: LG 그램북 AI, 갤럭시 북6, Jetson Orin Nano 2, Poco F9"
+title: "오늘 사는 노트북, 내년 오는 Jetson"
 date: 2026-09-02T15:00:00+09:00
 slug: "brief-weekly-gadgets"
 summary: "같은 날 출시된 국내 실속형 14형 노트북 2종, NVIDIA 차세대 보급형 Jetson, 가격이 오른 Poco F9 시리즈를 정리했습니다."

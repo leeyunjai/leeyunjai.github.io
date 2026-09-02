@@ -92,8 +92,8 @@ buildExpired = false
     [languages.ko.params]
       description = "최신 기기와 소프트웨어를 스펙·가격·출처와 함께 정리하는 블로그"
       [languages.ko.params.homeInfoParams]
-        Title = "최신 기기와 소프트웨어, 확인된 것만."
-        Content = "노트북·스마트폰·SBC·로봇부터 GitHub 인기 저장소와 Hugging Face 모델까지, 스펙과 가격을 출처와 함께 정리합니다."
+        Title = "새로 나온 것만, 출처 있는 것만."
+        Content = "노트북부터 로봇까지, 저장소부터 모델까지. 스펙도 가격도 출처와 함께."
     [languages.ko.params.footer]
       text = "[소개](/about/) · [개인정보처리방침](/privacy/) · [문의](mailto:leeyunjai1982@gmail.com)"
     [languages.ko.menu]
@@ -131,8 +131,8 @@ buildExpired = false
     [languages.en.params]
       description = "New hardware and software, with specs, prices, and a source for every claim"
       [languages.en.params.homeInfoParams]
-        Title = "New hardware and software, verified."
-        Content = "Laptops, phones, single-board computers and robots, plus trending repositories and models, with specs, prices, and a source for every claim."
+        Title = "Just launched, fully sourced."
+        Content = "From laptops to robots, from repositories to models. Specs and prices, always with a source."
     [languages.en.params.footer]
       text = "[About](/en/about/) · [Privacy](/en/privacy/) · [Contact](mailto:leeyunjai1982@gmail.com)"
     [languages.en.menu]
