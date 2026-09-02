@@ -10,3 +10,10 @@ Hugo + PaperMod 한/영 기술 블로그. https://leeyunjai.github.io/
 git clone --recurse-submodules https://github.com/leeyunjai/leeyunjai.github.io.git
 hugo server -D
 ```
+
+## 아이콘 라이선스
+
+- 본문·목록·메뉴 아이콘: [Lucide](https://lucide.dev) 기하를 따른 인라인 SVG. ISC License, 출처 표기 의무 없음.
+- 헤더 로고 마크: 자체 제작.
+- 외부 요청 없이 `layouts/_partials/icon.html`에서 인라인으로 그립니다. 아이콘을 추가하려면 이 파일에 이름 하나를 더하면 됩니다.
+- 출처 표기가 필요한 세트(Font Awesome Free는 CC BY 4.0, Flaticon은 표기 필수)는 쓰지 않았습니다.

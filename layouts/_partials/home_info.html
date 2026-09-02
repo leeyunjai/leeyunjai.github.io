@@ -1,25 +1,25 @@
 {{- with site.Params.homeInfoParams }}
 {{- $ko := eq site.Language.Lang "ko" }}
 {{- $cats := slice
-  (dict "tag" "laptop"       "ko" "노트북"   "en" "Laptops")
-  (dict "tag" "smartphone"   "ko" "스마트폰" "en" "Phones")
-  (dict "tag" "sbc"          "ko" "SBC"      "en" "SBCs")
-  (dict "tag" "robot"        "ko" "로봇"     "en" "Robots")
-  (dict "tag" "github"       "ko" "오픈소스" "en" "Open source")
-  (dict "tag" "hugging-face" "ko" "AI 모델"  "en" "AI models")
+  (dict "tag" "laptop"       "ko" "노트북"   "en" "Laptops"     "icon" "laptop")
+  (dict "tag" "smartphone"   "ko" "스마트폰" "en" "Phones"      "icon" "smartphone")
+  (dict "tag" "sbc"          "ko" "SBC"      "en" "SBCs"        "icon" "cpu")
+  (dict "tag" "robot"        "ko" "로봇"     "en" "Robots"      "icon" "bot")
+  (dict "tag" "github"       "ko" "오픈소스" "en" "Open source" "icon" "git")
+  (dict "tag" "hugging-face" "ko" "AI 모델"  "en" "AI models"   "icon" "sparkles")
 }}
 <section class="td-intro">
     <h1 class="td-headline">{{ .Title | markdownify }}</h1>
     <p class="td-lede">{{ .Content | markdownify }}</p>
     <div class="td-meta-row">
-        <span class="td-pub">{{ if $ko }}매주 월·목 발행{{ else }}Published Mon &amp; Thu{{ end }}</span>
+        <span class="td-pub">{{ partial "icon.html" (dict "name" "calendar" "size" 14) }}{{ if $ko }}매주 월·목 발행{{ else }}Published Mon &amp; Thu{{ end }}</span>
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </div>
     <ul class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">
         {{- range $cats }}
         {{- $p := site.GetPage (printf "/tags/%s" .tag) }}
         {{- $href := cond (ne $p nil) (cond (ne $p nil) $p.RelPermalink "") ("/tags/" | relLangURL) }}
-        <li><a href="{{ $href }}">{{ if $ko }}{{ .ko }}{{ else }}{{ .en }}{{ end }}</a></li>
+        <li><a href="{{ $href }}">{{ partial "icon.html" (dict "name" .icon "size" 15) }}<span>{{ if $ko }}{{ .ko }}{{ else }}{{ .en }}{{ end }}</span></a></li>
         {{- end }}
     </ul>
 </section>

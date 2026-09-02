@@ -1,0 +1,27 @@
+{{- $items := slice }}
+
+{{- if not .Date.IsZero }}
+  {{- $items = $items | append (printf `<span class="meta-item" title="%s">%s%s</span>`
+      (.Date)
+      (partial "icon.html" (dict "name" "calendar" "size" 14))
+      (.Date | time.Format (default ":date_long" site.Params.DateFormat))) }}
+{{- end }}
+
+{{- if (.Param "ShowReadingTime") }}
+  {{- $items = $items | append (printf `<span class="meta-item">%s%s</span>`
+      (partial "icon.html" (dict "name" "clock" "size" 14))
+      (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime))) }}
+{{- end }}
+
+{{- if (.Param "ShowWordCount") }}
+  {{- $items = $items | append (printf `<span class="meta-item">%s</span>`
+      (i18n "words" .WordCount | default (printf "%d words" .WordCount))) }}
+{{- end }}
+
+{{- if not (.Param "hideAuthor") }}
+  {{- with (partial "author.html" .) }}
+    {{- $items = $items | append (printf `<span class="meta-item">%s</span>` .) }}
+  {{- end }}
+{{- end }}
+
+{{- with $items }}{{ delimit . `<span class="meta-sep">·</span>` | safeHTML }}{{ end -}}

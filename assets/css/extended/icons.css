@@ -1,0 +1,36 @@
+/* Icon system: single stroke weight, currentColor, optically aligned to text.
+   Lucide (ISC) geometry; site mark drawn in-house. No external requests. */
+.icon { flex: none; vertical-align: -0.14em; }
+.meta-item { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.meta-item .icon { opacity: .7; }
+.meta-sep { margin: 0 8px; opacity: .45; }
+.post-meta, .entry-footer { display: flex; flex-wrap: wrap; align-items: center; }
+
+/* header mark sits with the wordmark, not above it */
+.logo a svg { border-radius: 0; margin-inline-end: 1px; }
+
+/* topic links on the home page */
+.td-topics a { display: inline-flex; align-items: center; gap: 7px; }
+.td-topics a .icon { opacity: .55; transition: opacity .15s; }
+.td-topics a:hover .icon { opacity: 1; }
+.td-pub { display: inline-flex; align-items: center; gap: 6px; }
+.td-pub .icon { opacity: .7; }
+
+/* prev / next */
+.paginav .title { display: inline-flex; align-items: center; gap: 4px; }
+.paginav .title .icon { opacity: .6; }
+
+/* outbound links in article bodies get a discreet mark */
+.post-content a[href^="http"]:not([href*="leeyunjai.github.io"])::after {
+  content: "";
+  display: inline-block;
+  width: .68em; height: .68em;
+  margin-inline-start: .22em;
+  vertical-align: -0.02em;
+  background: currentColor;
+  opacity: .5;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17 17 7M8 7h9v9'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.post-content a[href^="http"]:not([href*="leeyunjai.github.io"]):hover::after { opacity: .9; }
+.post-content h1 a::after, .post-content h2 a::after, .post-content h3 a::after { content: none; }
