@@ -308,7 +308,30 @@ git push -u origin main
 
 푸시 후 GitHub Actions(`Deploy Hugo site to GitHub Pages`)가 실행된다. 실패하면 로그를 보고 고친다.
 
-## 9. AdSense 신청 시점 알림 (매 실행 마지막)
+## 9. 실행 기록 (매 실행, 발행하지 않은 날도)
+
+무슨 일이 있었는지 나중에 볼 수 있게 **매 실행마다** 기록 파일을 하나 남기고 커밋·푸시한다.
+글을 쓰지 않은 날도 남긴다. 이 파일은 사이트에 올라가지 않는다(`content/`·`static/` 밖).
+
+```bash
+mkdir -p runlog
+cat > runlog/$(TZ=Asia/Seoul date +%F)-<mode>.md <<'EOF'
+- mode: <mode>
+- decision: published | skipped
+- reason: <skipped면 왜. published면 고른 제품/프로젝트와 제외한 후보>
+- files: <만든 파일 목록. 없으면 none>
+- images: <렌더링한 PNG 목록과 Read로 확인했는지>
+- errors: <막힌 단계와 에러 메시지 원문. 없으면 none>
+- commit: <해시 또는 none>
+- deploy: <success | failure | not-run>
+EOF
+git add runlog && git commit -m "runlog: $(TZ=Asia/Seoul date +%F) <mode>" && git push -u origin main
+```
+
+어떤 단계에서든 실패하면 **거기서 멈추지 말고** 이 기록에 에러 원문을 적고 푸시한 뒤 끝낸다.
+실행 결과 메시지의 마지막 줄에는 반드시 `decision / commit / deploy` 세 값을 그대로 적는다.
+
+## 10. AdSense 신청 시점 알림 (매 실행 마지막)
 
 ```bash
 POSTS=$(ls content/posts/*.ko.md 2>/dev/null | wc -l)
