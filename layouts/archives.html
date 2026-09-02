@@ -45,7 +45,7 @@
   </h2>
   {{- range .Pages.GroupByDate "01" }}
   {{- $m := .Key }}
-  {{- $label := cond (eq site.Language.Lang "ko") (printf "%d월" (int $m)) (time.Format "January" (time.AsTime (printf "%s-%s-01" $year $m))) }}
+  {{- $label := cond (eq site.Language.Lang "ko") (printf "%s월" (strings.TrimLeft "0" $m)) (time.Format "January" (time.AsTime (printf "%s-%s-01" $year $m))) }}
   <div class="archive-month">
     <h3 class="archive-month-header" id="{{ $year }}-{{ $m }}">
       <a class="archive-header-link" href="#{{ $year }}-{{ $m }}">
