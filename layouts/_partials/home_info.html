@@ -9,22 +9,19 @@
   (dict "tag" "hugging-face" "ko" "AI 모델"  "en" "AI models")
 }}
 <section class="td-intro">
+    <h1 class="td-headline">{{ .Title | markdownify }}</h1>
     <p class="td-lede">{{ .Content | markdownify }}</p>
-    <p class="td-note">
-        {{- if $ko }}월요일에는 이번 주 신제품을, 목요일에는 한 가지를 깊게 다룹니다. 확인된 사실만 쓰고, 모든 글에 출처를 답니다.
-        {{- else }}Mondays cover the week's launches. Thursdays go deep on one topic. Only verified facts, with a source on every entry.{{ end }}
-    </p>
-    <nav class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">
-        <span class="td-topics-label">{{ if $ko }}주제{{ else }}Topics{{ end }}</span>
-        {{- range $i, $c := $cats }}
-        {{- $p := site.GetPage (printf "/tags/%s" $c.tag) }}
-        {{- $href := cond (ne $p nil) (cond (ne $p nil) $p.RelPermalink "") ("/tags/" | relLangURL) }}
-        {{- if $i }}<span class="td-sep" aria-hidden="true">·</span>{{ end }}
-        <a href="{{ $href }}">{{ if $ko }}{{ $c.ko }}{{ else }}{{ $c.en }}{{ end }}</a>
-        {{- end }}
-    </nav>
-    <div class="td-intro-foot">
+    <div class="td-meta-row">
+        <span class="td-pub">{{ if $ko }}매주 월·목 발행{{ else }}Published Mon &amp; Thu{{ end }}</span>
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </div>
+    <ul class="td-topics" aria-label="{{ if $ko }}주제{{ else }}Topics{{ end }}">
+        {{- range $cats }}
+        {{- $p := site.GetPage (printf "/tags/%s" .tag) }}
+        {{- $href := cond (ne $p nil) (cond (ne $p nil) $p.RelPermalink "") ("/tags/" | relLangURL) }}
+        <li><a href="{{ $href }}">{{ if $ko }}{{ .ko }}{{ else }}{{ .en }}{{ end }}</a></li>
+        {{- end }}
+    </ul>
 </section>
+<h2 class="td-section">{{ if $ko }}최신 글{{ else }}Latest{{ end }}</h2>
 {{- end -}}
