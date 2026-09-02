@@ -11,6 +11,12 @@ git clone --recurse-submodules https://github.com/leeyunjai/leeyunjai.github.io.
 hugo server -D
 ```
 
+## 글 이미지
+
+- `scripts/postimg.py` — 글의 검증된 수치로 커버 카드(1200×630, OG 겸용)와 비교 차트를 그립니다. 외부 사진은 쓰지 않습니다.
+- `scripts/fonts/NotoSansKR-{400,700}.ttf` — 카드 렌더링용. SIL Open Font License 1.1.
+- `scripts/img-specs/` — 각 이미지의 입력 JSON. 다시 그릴 때 씁니다.
+
 ## 아이콘 라이선스
 
 - 본문·목록·메뉴 아이콘: [Lucide](https://lucide.dev) 기하를 따른 인라인 SVG. ISC License, 출처 표기 의무 없음.

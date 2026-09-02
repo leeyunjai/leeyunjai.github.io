@@ -5,6 +5,10 @@ slug: "embedded-jetson-orin-nano-2"
 summary: "NVIDIA가 발표한 보급형 Jetson 후속 모델을 현행 Orin Nano Super와 스펙으로 비교하고, 로봇에 올릴 때 실제로 문제가 되는 전력과 메모리를 짚었습니다."
 tags: ["SBC", "Robot", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/embedded-jetson-orin-nano-2.ko.png"
+  alt: "Jetson Orin Nano 2 핵심 수치: 78 TOPS, 8GB, 15~40W, 2027년 상반기 출하"
+  relative: false
 draft: false
 ---
 
@@ -23,6 +27,8 @@ NVIDIA가 8월 25일(현지 시간) Jetson Orin Nano 2를 발표했습니다. �
 | 출하 | 2027년 상반기 | 판매 중 |
 
 출처: [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai), [Hackster.io](https://www.hackster.io/news/say-hello-to-the-nvidia-jetson-orin-nano-2-68cf1241460f), [NVIDIA Jetson Orin Nano Super Developer Kit](https://www.sparkfun.com/nvidia-jetson-orin-nano-developer-kit.html)
+
+![Orin Nano 2와 Orin Nano Super 수치 비교: AI 연산, CUDA 코어, 메모리 대역폭, 최대·최소 전력](/images/posts/embedded-jetson-orin-nano-2-compare.ko.png "위 표의 수치를 막대로 그린 것입니다. 최소 전력이 7W에서 15W로 오른 점을 보세요.")
 
 ## "2배"는 같은 조건의 2배가 아닙니다
 

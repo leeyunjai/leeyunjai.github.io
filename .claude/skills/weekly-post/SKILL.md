@@ -222,7 +222,71 @@ tags·categories는 영문으로 통일한다. tags는 실제 다룬 것만 넣�
 
 제품마다: 맥락 1~2문장 → 핵심 스펙 bullet 3~6개 → 가격/출시일 → 의견 1~2줄 → 출처 링크
 
-## 6. 검증
+## 6. 이미지 (글마다 최소 1장, 최대 2장)
+
+**외부 사진은 쓰지 않는다.** 이 실행 환경은 외부 이미지 호스트 다운로드가 전부 차단돼 있고, 제조사 사진은 저작권 문제가 있다.
+대신 **글에서 확인된 수치로 카드를 직접 그린다.** `scripts/postimg.py`가 렌더링한다. 한글 폰트는 저장소에 들어 있다.
+
+### 6-1. 커버 카드 (필수, 언어별 1장씩)
+
+```bash
+pip install -q pillow     # 세션마다 한 번
+cat > /tmp/cover.ko.json <<'EOF'
+{"kicker": "심층 리뷰 · SBC · 로봇",
+ "title": "<한국어 글 제목 그대로>",
+ "date": "YYYY.MM.DD",
+ "stats": [{"value": "78 TOPS", "label": "AI 연산"}, {"value": "8GB", "label": "메모리"}]}
+EOF
+python3 scripts/postimg.py cover /tmp/cover.ko.json static/images/posts/<slug>.ko.png
+# 영어도 같은 방식으로 /tmp/cover.en.json → static/images/posts/<slug>.en.png
+```
+
+- `stats`는 **본문에 출처와 함께 적힌 수치만** 3~4개. 본문에 없는 숫자는 카드에도 없다.
+- `kicker`는 카테고리 · 태그를 해당 언어로. `title`은 글 제목과 글자 하나까지 같게.
+- 만든 JSON은 `scripts/img-specs/<slug>.<lang>.json` 으로 저장해 둔다. 나중에 다시 그릴 때 쓴다.
+
+### 6-2. 비교 차트 (심층 리뷰에 두 제품 수치 비교 표가 있을 때, 선택)
+
+```bash
+cat > /tmp/cmp.ko.json <<'EOF'
+{"title": "A vs B", "a": "A (신형)", "b": "B (현행)",
+ "rows": [{"label": "AI 연산 (TOPS)", "a": 78, "b": 67}, {"label": "최소 전력 (W)", "a": 15, "b": 7}],
+ "note": "출처: ..."}
+EOF
+python3 scripts/postimg.py compare /tmp/cmp.ko.json static/images/posts/<slug>-compare.ko.png
+```
+
+`rows`의 숫자는 본문 비교 표에 있는 값만 쓴다. 단위는 `label`에 적는다.
+
+### 6-3. 글에 연결
+
+front matter에 커버를 넣는다 (두 파일 각각 자기 언어 이미지):
+
+```yaml
+cover:
+  image: "/images/posts/<slug>.ko.png"
+  alt: "<카드에 적힌 수치를 문장으로>"
+  relative: false
+```
+
+비교 차트는 본문의 비교 표 **바로 아래**에 넣는다. 캡션에 무엇을 보라는지 한 줄 쓴다.
+
+```markdown
+![A와 B 수치 비교: 항목1, 항목2](/images/posts/<slug>-compare.ko.png "표를 막대로 그린 것입니다. 최소 전력 차이를 보세요.")
+```
+
+### 6-4. 확인과 커밋
+
+- 생성한 PNG를 **Read 도구로 열어 본다.** 글자가 타일을 넘치거나 깨지면 라벨을 줄여서 다시 그린다.
+- `git add` 에 `static/images/posts/<slug>*.png` 와 `scripts/img-specs/<slug>*.json` 을 포함한다.
+
+### 절대 규칙
+
+- **AI로 제품 사진을 만들지 않는다.** 실물처럼 보이는 가짜 이미지 한 장이 "확인된 것만"이라는 이 사이트의 약속을 깨뜨린다.
+- 외부 이미지 URL을 핫링크하지 않는다. 언젠가 끊기고, 저작권도 남의 것이다.
+- 카드의 숫자는 전부 본문에 출처와 함께 있어야 한다. 카드가 본문보다 앞서가면 안 된다.
+
+## 7. 검증
 
 - 두 파일의 front matter YAML이 유효한지, `date`·`slug`·`tags`·`categories`가 같은지, `draft: false` 인지.
 - 모든 링크가 http(s) 또는 `/` 로 시작하는지.
@@ -233,17 +297,18 @@ tags·categories는 영문으로 통일한다. tags는 실제 다룬 것만 넣�
   ```
 - `hugo` 가 설치돼 있으면 `hugo --gc --minify` 로 빌드해 본다. 없으면 건너뛴다.
 
-## 7. 커밋·푸시 (main)
+## 8. 커밋·푸시 (main)
 
 ```bash
-git add content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md
+git add content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md \
+        static/images/posts/<slug>*.png scripts/img-specs/<slug>*.json
 git commit -m "post: <English title>"
 git push -u origin main
 ```
 
 푸시 후 GitHub Actions(`Deploy Hugo site to GitHub Pages`)가 실행된다. 실패하면 로그를 보고 고친다.
 
-## 8. AdSense 신청 시점 알림 (매 실행 마지막)
+## 9. AdSense 신청 시점 알림 (매 실행 마지막)
 
 ```bash
 POSTS=$(ls content/posts/*.ko.md 2>/dev/null | wc -l)
