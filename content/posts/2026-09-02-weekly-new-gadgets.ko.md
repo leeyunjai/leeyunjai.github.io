@@ -3,7 +3,7 @@ title: "이번 주 신제품: LG 그램북 AI, 갤럭시 북6, Jetson Orin Nano 
 date: 2026-09-02T15:00:00+09:00
 slug: "weekly-new-gadgets"
 summary: "같은 날 출시된 국내 실속형 14형 노트북 2종, NVIDIA 차세대 보급형 Jetson, 가격이 오른 Poco F9 시리즈를 정리했습니다."
-tags: ["Laptop", "SBC", "Smartphone", "Korea", "Global"]
+tags: ["Laptop", "SBC", "Smartphone", "GitHub", "Korea", "Global"]
 categories: ["Weekly New Gadgets"]
 draft: false
 ---
@@ -61,6 +61,19 @@ draft: false
 - 의견: 8,050mAh 배터리에 100W 충전을 넣은 게 핵심입니다. 다만 가격 인상 폭이 크고, 같은 칩을 쓴 경쟁 제품이 여럿이라 작년만큼 가성비 이야기가 강하지 않습니다.
 - 출처: [9to5Google](https://9to5google.com/2026/09/01/poco-f9-pro-and-f9-ultra-launch/), [Tech Advisor](https://www.techadvisor.com/article/3224419/xiaomi-poco-f9-ultra-f9-pro-launch-with-major-price-hikes.html)
 
+## 소프트웨어
+
+### Pollen Robotics microduck
+
+Hugging Face 산하 Pollen Robotics가 25cm, 800g짜리 이족 보행 오리 로봇 microduck의 소프트웨어 스택을 공개했습니다. 강화학습 정책으로 걷고, 구르고, 부리로 물건을 집습니다. 8월 28일 발표 뒤 이번 주 GitHub에서 인기 저장소로 올라왔습니다.
+
+- 저장소: github.com/pollen-robotics/microduck, Apache-2.0, Rust, 작성 시점 약 6.3k 스타
+- Rockchip RK3566 보드에서 50Hz 제어 루프로 서보 15개 구동, 카메라·ToF 깊이 센서·Bluetooth·게임패드 지원
+- 시뮬레이션과 RL 학습 환경은 별도 저장소 microduck_rl
+- 설치·실행: README는 한 줄 설치 대신 문서와 `robotctl` CLI를 안내합니다. 로봇 본체는 pollen-robotics.com/microduck에서 판매
+- 의견: 교육용으로 볼 만한 건 오리가 아니라 파이프라인입니다. 시뮬레이션에서 보행을 학습시키고 저가 ARM 보드에 올려 반복하는 흐름이 그대로 공개돼 있습니다. 다만 공개된 건 소프트웨어뿐이고 Pollen이 하드웨어를 오픈소스라 부르지 말아 달라고 밝혔으니 STL 파일은 기대하지 않는 게 좋습니다.
+- 출처: [GitHub](https://github.com/pollen-robotics/microduck), [CNX Software](https://www.cnx-software.com/2026/08/28/microduck-a-duck-like-biped-robot-designed-for-physical-ai-experimentation-and-fun/)
+
 ## 이번 주 요약
 
 | 제품 | 카테고리 | 지역 | 핵심 스펙 | 가격 | 출시일 |
@@ -69,3 +82,4 @@ draft: false
 | 삼성 뉴 갤럭시 북6 | 노트북 | 국내 | Core Series 3, 14형, 1.35kg | 119만~149만 원 | 9월 1일 |
 | NVIDIA Jetson Orin Nano 2 | SBC/로봇 | 해외 | 78 TOPS, 8코어 A78, 8GB LPDDR5X | 확인 필요 | 2027년 상반기 |
 | Poco F9 Pro / F9 Ultra | 스마트폰 | 해외 | Snapdragon 8 Elite Gen 5, 185Hz, 6,330/8,050mAh | 699/799달러부터 | 9월 1일 |
+| Pollen Robotics microduck | 오픈소스 | 소프트웨어 | Rust, RK3566, 서보 15개, RL 정책 | Apache-2.0 | 8월 28일 |

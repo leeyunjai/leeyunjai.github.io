@@ -3,7 +3,7 @@ title: "This Week's New Gadgets: LG gram Book AI, Galaxy Book6, Jetson Orin Nano
 date: 2026-09-02T15:00:00+09:00
 slug: "weekly-new-gadgets"
 summary: "Two budget 14-inch laptops launched in Korea on the same day, NVIDIA's next entry-level Jetson for robots, and Poco's pricier F9 flagships."
-tags: ["Laptop", "SBC", "Smartphone", "Korea", "Global"]
+tags: ["Laptop", "SBC", "Smartphone", "GitHub", "Korea", "Global"]
 categories: ["Weekly New Gadgets"]
 draft: false
 ---
@@ -70,6 +70,19 @@ Poco built its name on flagship chips at mid-range prices. The F9 series keeps t
 - Take: An 8,050 mAh cell with 100 W charging in a phone body is the headline, and the 185 Hz panel is a spec nobody asked for but gamers will like. The problem is price. Poco itself blamed rising memory costs, but with the same chip as several rivals, the value story that defined the F series is much weaker this year.
 - Source: [9to5Google](https://9to5google.com/2026/09/01/poco-f9-pro-and-f9-ultra-launch/), [Tech Advisor](https://www.techadvisor.com/article/3224419/xiaomi-poco-f9-ultra-f9-pro-launch-with-major-price-hikes.html)
 
+## Software
+
+### Pollen Robotics microduck
+
+Pollen Robotics, now part of Hugging Face, published the software stack for microduck, a 25 cm, 800 g biped duck robot that walks, rolls, and grasps using reinforcement-learning policies. The repository trended on GitHub this week after the August 28 announcement.
+
+- Repo: github.com/pollen-robotics/microduck, Apache-2.0, Rust, about 6.3k stars at the time of writing
+- Runs on a Rockchip RK3566 board with a 50 Hz control loop driving 15 servos, plus camera, ToF depth sensor, Bluetooth, and gamepad support
+- Companion repo microduck_rl holds the simulation and RL training environments
+- Install or run: the README points to the documentation and a `robotctl` command-line tool rather than a one-line install; the robot itself is sold at pollen-robotics.com/microduck
+- Take: The interesting part for education is the pipeline, not the duck: train a gait in simulation, deploy to a cheap ARM board, iterate. Note that only the software is open; Pollen has asked press not to call the hardware open source, so do not expect STL files.
+- Source: [GitHub](https://github.com/pollen-robotics/microduck), [CNX Software](https://www.cnx-software.com/2026/08/28/microduck-a-duck-like-biped-robot-designed-for-physical-ai-experimentation-and-fun/)
+
 ## This Week at a Glance
 
 | Product | Category | Region | Key specs | Price | Release |
@@ -78,3 +91,4 @@ Poco built its name on flagship chips at mid-range prices. The F9 series keeps t
 | Samsung New Galaxy Book6 | Laptop | Korea | Core Series 3, 14-inch, 1.35 kg | 1,190,000 to 1,490,000 KRW | Sep 1 |
 | NVIDIA Jetson Orin Nano 2 | SBC / Robotics | Global | 78 TOPS, 8-core A78, 8 GB LPDDR5X | TBC | H1 2027 |
 | Poco F9 Pro / F9 Ultra | Smartphone | Global | Snapdragon 8 Elite Gen 5, 185 Hz, 6,330 / 8,050 mAh | from $699 / $799 | Sep 1 |
+| Pollen Robotics microduck | Open source | Software | Rust, RK3566, 15 servos, RL policies | Apache-2.0 | Aug 28 |
