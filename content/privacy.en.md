@@ -72,6 +72,10 @@ This policy may be updated to reflect changes in law or services. Any changes wi
 
 ## 10. Contact
 
-For privacy-related questions, please open an issue on the GitHub repository [leeyunjai/leeyunjai.github.io](https://github.com/leeyunjai/leeyunjai.github.io).
+For privacy-related questions, please contact:
+
+- Operator: Yunjai Lee
+- Email: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
+- GitHub: [leeyunjai/leeyunjai.github.io](https://github.com/leeyunjai/leeyunjai.github.io)
 
 - Effective date: September 2, 2026

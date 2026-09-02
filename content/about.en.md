@@ -15,6 +15,12 @@ TechDrop is a weekly roundup of newly announced tech hardware (laptops, smartpho
 - Short opinions are the author's own and are not purchase recommendations.
 - The Korean and English posts are written separately from the same research, each for its own readers.
 
+## Who writes this
+
+Yunjai Lee. I work on the hardware and software of Pibo and PiBrain, educational robots built at Circulus. My background is embedded software, computer vision, and hardware production, which is the angle most of these posts come from.
+
 ## Contact
 
-For questions or corrections, please open an issue on the GitHub repository [leeyunjai/leeyunjai.github.io](https://github.com/leeyunjai/leeyunjai.github.io).
+- Email: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
+- GitHub: [github.com/leeyunjai](https://github.com/leeyunjai)
+- Corrections and tips: email me or open an [issue](https://github.com/leeyunjai/leeyunjai.github.io/issues). If a spec or price is wrong, send the source and I will fix it.

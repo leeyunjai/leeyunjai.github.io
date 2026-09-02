@@ -86,6 +86,8 @@ buildExpired = false
       [languages.ko.params.homeInfoParams]
         Title = "이번 주 IT 신제품, 확인된 것만."
         Content = "새로 나온 노트북·스마트폰·SBC·로봇과 개발자용 오픈소스를 스펙, 가격, 출처와 함께 정리합니다."
+    [languages.ko.params.footer]
+      text = "[소개](/about/) · [개인정보처리방침](/privacy/) · [문의](mailto:leeyunjai1982@gmail.com)"
     [languages.ko.menu]
       [[languages.ko.menu.main]]
         identifier = "posts"
@@ -123,6 +125,8 @@ buildExpired = false
       [languages.en.params.homeInfoParams]
         Title = "This week in tech hardware, verified."
         Content = "New laptops, phones, single-board computers, robots, and developer open source, with specs, prices, and a source for every claim."
+    [languages.en.params.footer]
+      text = "[About](/en/about/) · [Privacy](/en/privacy/) · [Contact](mailto:leeyunjai1982@gmail.com)"
     [languages.en.menu]
       [[languages.en.menu.main]]
         identifier = "posts"
