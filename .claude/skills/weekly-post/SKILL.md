@@ -76,8 +76,31 @@ TZ=Asia/Seoul date +%u   # 1=월 ... 7=일
 ## 1. 준비 (필수)
 
 1. `git fetch origin main && git checkout main && git pull origin main`
-2. 오늘 날짜와 시각을 `TZ=Asia/Seoul date +%FT%T+09:00` 로 확인한다. front matter `date`는 이 값을 쓴다.
-   **미래 시각 금지.** `buildFuture = false` 라서 빌드 시점보다 미래인 글은 사이트에서 빠진다.
+2. 날짜는 **반드시 명령 출력을 그대로 붙여넣는다.** 눈대중으로 적거나 분 단위를 반올림하지 않는다.
+
+   ```bash
+   TZ=Asia/Seoul date +%FT%T+09:00
+   ```
+
+   **미래 시각은 글을 통째로 사라지게 한다.** `buildFuture = false` 라서 빌드 시점보다
+   `date`가 1초라도 앞서면 Hugo가 그 글을 출력에서 제외한다. 커밋·푸시·배포는 전부 성공하고
+   실행 기록에도 success 로 남지만 사이트에는 글이 없다. 실제로 그렇게 한 편을 잃은 적이 있다
+   (2026-09-09: 03:11 에 커밋하면서 date 를 03:20 으로 적어 세 번의 배포에서 모두 빠졌다).
+
+   그래서 **글을 다 쓴 뒤, 커밋 직전에 한 번 더 검사하고 어긋나면 고친다:**
+
+   ```bash
+   NOW=$(TZ=Asia/Seoul date +%FT%T+09:00)
+   for f in content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md; do
+     D=$(sed -n 's/^date: //p' "$f")
+     if [ "$D" \> "$NOW" ]; then
+       echo "미래 날짜 $D -> $NOW 로 교정: $f"
+       sed -i "s|^date: .*|date: $NOW|" "$f"
+     fi
+   done
+   ```
+
+   조사와 집필에 시간이 걸리므로, 준비 단계에서 받아둔 시각은 이미 과거다. 그대로 쓰면 안전하다.
 3. **최근 30일 글의 front matter만 확인한다. 본문은 읽지 않는다.**
 
    ```bash
@@ -340,6 +363,7 @@ cover:
 - 두 파일의 front matter YAML이 유효한지, `date`·`slug`·`tags`·`categories`가 같은지, `draft: false` 인지.
 - 모든 링크가 http(s) 또는 `/` 로 시작하는지.
 - 두 파일 모두 `cover.image` 가 있고, 그 경로의 PNG가 실제로 존재하는지.
+- **두 파일의 `date`가 지금보다 미래가 아닌지.** 1번의 교정 스크립트를 여기서 한 번 더 돌린다.
 - 분량:
   ```bash
   sed '1,/^---$/d' content/posts/<file>.en.md | grep -v '^|' | wc -w

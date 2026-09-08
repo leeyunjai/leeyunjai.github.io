@@ -1,6 +1,6 @@
 ---
 title: "YuzukiNeko, Pico's Size With a Linux Brain"
-date: 2026-09-09T03:20:00+09:00
+date: 2026-09-09T03:11:00+09:00
 slug: "embedded-yuzukineko-risc-v-pico"
 summary: "YuzukiNeko is an open-hardware RISC-V board shaped exactly like a Raspberry Pi Pico, but it runs Linux instead of bare-metal firmware. Here's how it compares to the Pico 2."
 tags: ["SBC", "Global"]

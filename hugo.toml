@@ -8,7 +8,9 @@ hasCJKLanguage = true
 
 enableRobotsTXT = true
 buildDrafts = false
-buildFuture = false
+buildFuture = true      # 이 사이트는 예약 발행을 하지 않는다. false 면 시각이 몇 분만 앞서도
+                        # 글이 소리 없이 사라진다(2026-09-09 사고). true 면 시각이 조금 틀릴 뿐
+                        # 글은 살아 있고 눈에 띈다. 날짜 정확성은 스킬 1번의 검사로 지킨다.
 buildExpired = false
 
 [pagination]
