@@ -40,7 +40,7 @@ phones when unfolded.
 | Price (China) | 16GB+512GB ¥12,999, 16GB+1TB ¥14,999, ceramic 16GB+1TB ¥15,999 |
 | Sales start | September 10 (China) |
 
-The base configuration starts at ¥10,999. Whether the phone will reach markets outside China,
+The base configuration starts at ¥12,999. Whether the phone will reach markets outside China,
 including Korea, has not been confirmed. The Xring O3 chip is notable on its own: it's Xiaomi's
 own silicon rather than a licensed Qualcomm or MediaTek part, and the 1TB configuration is
 among the first phones anywhere to pair it with LPDDR6 memory, a generation ahead of the
@@ -59,7 +59,7 @@ slab phone — has been independently benchmarked yet.
 | Main camera set | 200MP + 50MP ultrawide + 50MP tele | 200MP + 12MP ultrawide + 10MP tele |
 | Thickness (unfolded) | 5.02mm | TBC |
 | Weight | 219g | TBC |
-| Starting price | ¥10,999 (China, roughly comparable to $1,500) | $1,999 (US) |
+| Starting price | ¥12,999 (China) | $1,999 (US) |
 
 ![Xiaomi 18 Fold versus Galaxy Z Fold7: 6000 against 4400mAh, 7.58 against 8.0-inch inner display, 5.38 against 6.5-inch cover display, 50 against 12MP ultrawide, 50 against 10MP telephoto](/images/posts/phone-xiaomi-18-fold.en-compare.png "The table above, drawn as bars. Xiaomi leads on battery and secondary cameras; Samsung leads on screen size.")
 
