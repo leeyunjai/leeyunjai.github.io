@@ -14,7 +14,7 @@ FONTS = Path(__file__).resolve().parent / "fonts"
 BG, TILE, BORDER = (29, 30, 32), (40, 41, 45), (58, 59, 63)
 FG, SEC, TER, ACCENT = (232, 232, 234), (160, 161, 165), (110, 111, 116), (47, 111, 237)
 W, H = 1200, 630
-SITE = "leeyunjai.github.io"
+SITE = "yjworks.github.io"
 
 def font(weight, size):
     return ImageFont.truetype(str(FONTS / f"NotoSansKR-{weight}.ttf"), size)

@@ -6,7 +6,7 @@ ShowBreadCrumbs: false
 ShowReadingTime: false
 ---
 
-DigitalBrain ("this site", https://leeyunjai.github.io/) respects your privacy. This policy explains what information is collected when you visit this site, how it is used, and the choices you have.
+DigitalBrain ("this site", https://yjworks.github.io/) respects your privacy. This policy explains what information is collected when you visit this site, how it is used, and the choices you have.
 
 ## 1. Information We Collect
 
@@ -76,6 +76,6 @@ For privacy-related questions, please contact:
 
 - Operator: Yunjai Lee
 - Email: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
-- GitHub: [yjworks/leeyunjai.github.io](https://github.com/yjworks/leeyunjai.github.io)
+- GitHub: [yjworks/yjworks.github.io](https://github.com/yjworks/yjworks.github.io)
 
 - Effective date: September 2, 2026

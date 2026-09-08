@@ -1,13 +1,13 @@
 # DigitalBrain
 
-Hugo + PaperMod 한/영 기술 블로그. https://leeyunjai.github.io/
+Hugo + PaperMod 한/영 기술 블로그. https://yjworks.github.io/
 
 - 글: `content/posts/YYYY-MM-DD-<slug>.ko.md` / `.en.md`
 - 배포: `main` push 시 GitHub Actions → GitHub Pages
 - 자동 작성: 평일 매일 1편. `hw1`(월) `hw2`(화) `embedded`(수) `dev`(목) `brief`(금)
 
 ```bash
-git clone --recurse-submodules https://github.com/yjworks/leeyunjai.github.io.git
+git clone --recurse-submodules https://github.com/yjworks/yjworks.github.io.git
 hugo server -D
 ```
 

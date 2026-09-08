@@ -36,4 +36,4 @@ ShowReadingTime: false
 
 - 이메일: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
 - GitHub: [github.com/yjworks](https://github.com/yjworks)
-- 정정 요청·제보: 이메일이나 저장소 [Issues](https://github.com/yjworks/leeyunjai.github.io/issues)로 보내 주세요. 스펙이나 가격이 틀렸다면 출처와 함께 알려 주시면 바로 고치겠습니다.
+- 정정 요청·제보: 이메일이나 저장소 [Issues](https://github.com/yjworks/yjworks.github.io/issues)로 보내 주세요. 스펙이나 가격이 틀렸다면 출처와 함께 알려 주시면 바로 고치겠습니다.
