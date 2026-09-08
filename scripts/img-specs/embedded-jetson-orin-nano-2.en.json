@@ -1,0 +1,23 @@
+{
+ "kicker": "Deep Dive · SBC · Robots",
+ "title": "Jetson Orin Nano 2: the 2x that isn't",
+ "date": "Sep 2, 2026",
+ "stats": [
+  {
+   "value": "78 TOPS",
+   "label": "AI performance"
+  },
+  {
+   "value": "8GB",
+   "label": "Memory (unchanged)"
+  },
+  {
+   "value": "15–40W",
+   "label": "Power range"
+  },
+  {
+   "value": "H1 2027",
+   "label": "Shipping"
+  }
+ ]
+}

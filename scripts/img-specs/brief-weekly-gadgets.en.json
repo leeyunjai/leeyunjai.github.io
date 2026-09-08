@@ -1,0 +1,23 @@
+{
+ "kicker": "Weekly Brief · Korea · Global",
+ "title": "On sale today, shipping next year",
+ "date": "Sep 2, 2026",
+ "stats": [
+  {
+   "value": "KRW 1.45M+",
+   "label": "LG gram Book 14"
+  },
+  {
+   "value": "KRW 1.19M+",
+   "label": "Galaxy Book6 14"
+  },
+  {
+   "value": "78 TOPS",
+   "label": "Jetson Orin Nano 2"
+  },
+  {
+   "value": "H1 2027",
+   "label": "Jetson ships"
+  }
+ ]
+}

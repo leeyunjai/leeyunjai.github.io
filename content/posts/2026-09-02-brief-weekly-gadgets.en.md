@@ -5,6 +5,10 @@ slug: "brief-weekly-gadgets"
 summary: "Two budget 14-inch laptops launched in Korea on the same day, NVIDIA's next entry-level Jetson for robots, and Poco's pricier F9 flagships."
 tags: ["Laptop", "SBC", "Smartphone", "GitHub", "Korea", "Global"]
 categories: ["Weekly Brief"]
+cover:
+  image: "/images/posts/brief-weekly-gadgets.en.png"
+  alt: "Weekly brief card: LG gram Book 14 from KRW 1.45M, Galaxy Book6 14 from KRW 1.19M, Jetson Orin Nano 2 at 78 TOPS, shipping H1 2027"
+  relative: false
 draft: false
 ---
 

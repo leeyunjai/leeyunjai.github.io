@@ -5,6 +5,10 @@ slug: "brief-galaxy-s26-fe-atlas"
 summary: "국내에서는 삼성 갤럭시 S26 FE가 104만 5천 원에 정식 출시됐고, 해외에서는 뇌파를 읽는 웨어러블 Atlas 1.0이 판매를 시작했습니다. 소프트웨어 쪽에서는 업스테이지의 대형 오픈 모델 Solar Open2-250B가 화제였습니다."
 tags: ["Smartphone", "Wearable", "AI Device", "Hugging Face", "Korea", "Global"]
 categories: ["Weekly Brief"]
+cover:
+  image: "/images/posts/brief-galaxy-s26-fe-atlas.ko.png"
+  alt: "주간 브리핑 카드: 갤럭시 S26 FE 256GB 104만 5천 원, 배터리 4,900mAh, Atlas 1.0 499달러, Solar Open2 250B 파라미터"
+  relative: false
 draft: false
 ---
 9월 첫째 주 마지막 날, 국내에서는 삼성 갤럭시 S26 FE가 정식 출시됐습니다. 해외에서는 뇌파를 읽는 웨어러블 Atlas 1.0이 이미 판매를 시작했고, 소프트웨어 쪽에서는 업스테이지의 대형 오픈 모델 Solar Open2-250B가 화제였습니다. 이번 주 초중반에 다룬 임베디드 보드·GitHub 오픈소스·웨어러블 심층 리뷰는 맨 아래에 모아 링크합니다.

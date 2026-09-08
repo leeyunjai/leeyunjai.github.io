@@ -5,6 +5,10 @@ slug: "appliance-roborock-saros20-ecovacs-x12s"
 summary: "IFA 2026에서 나란히 공개된 로보락 사로스 20 시리즈와 에코백스 디봇 X12S 옴니사이클론을 흡입력, 문턱 극복 구조, 걸레 관리 방식, 가격 기준으로 비교했습니다."
 tags: ["Home Appliance", "Korea", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/appliance-roborock-saros20-ecovacs-x12s.ko.png"
+  alt: "커버 카드: 로보락 흡입력 36,000Pa, 에코백스 27,000Pa, 문턱 통과 높이 8.8cm, 에코백스 연속 주행 497분"
+  relative: false
 draft: false
 ---
 

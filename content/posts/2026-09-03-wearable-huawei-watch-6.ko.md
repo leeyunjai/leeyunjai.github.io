@@ -5,6 +5,10 @@ slug: "wearable-huawei-watch-6"
 summary: "IFA 2026에서 공개된 화웨이 워치6·워치6 프로를 픽셀 워치5와 스펙·가격·생태계 기준으로 비교했습니다."
 tags: ["Wearable", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/wearable-huawei-watch-6.ko.png"
+  alt: "커버 카드: 화웨이 워치6 프로 최대 밝기 3,500니트, 워치6 무게 38g, 영국 가격 399.99파운드, 9월 23일 판매 시작"
+  relative: false
 draft: false
 ---
 

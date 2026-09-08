@@ -1,0 +1,23 @@
+{
+ "kicker": "Deep Dive · Appliances",
+ "title": "Roborock Pulls Harder, Ecovacs Rinses Cleaner",
+ "date": "Sep 7, 2026",
+ "stats": [
+  {
+   "value": "36,000Pa",
+   "label": "Roborock suction"
+  },
+  {
+   "value": "27,000Pa",
+   "label": "Ecovacs suction"
+  },
+  {
+   "value": "8.8cm",
+   "label": "Threshold clearance"
+  },
+  {
+   "value": "497 min",
+   "label": "Ecovacs runtime"
+  }
+ ]
+}

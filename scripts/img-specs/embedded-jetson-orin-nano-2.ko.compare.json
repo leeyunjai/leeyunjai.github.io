@@ -1,0 +1,23 @@
+{
+ "title": "Orin Nano 2 vs Orin Nano Super",
+ "a": "Orin Nano 2 (신형)",
+ "b": "Orin Nano Super (현행)",
+ "rows": [
+  {
+   "label": "AI 연산 (TOPS)",
+   "a": 78,
+   "b": 67
+  },
+  {
+   "label": "CUDA 코어",
+   "a": 1536,
+   "b": 1024
+  },
+  {
+   "label": "메모리 대역폭 (GB/s)",
+   "a": 120,
+   "b": 102
+  }
+ ],
+ "note": "높을수록 좋은 항목만. 전력(15~40W vs 7~25W)은 본문 표 참고 · 출처: NVIDIA Newsroom"
+}

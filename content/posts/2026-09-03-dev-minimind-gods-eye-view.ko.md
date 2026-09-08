@@ -5,6 +5,10 @@ slug: "dev-minimind-gods-eye-view"
 summary: "이번 주 GitHub 트렌딩에서 64M 파라미터 언어모델을 2시간 만에 학습하는 MiniMind와, 브라우저에서 실시간 위성·항공·해상 데이터를 3D 지구본으로 보여주는 God's Eye View를 골랐다."
 tags: ["GitHub"]
 categories: ["Dev Picks"]
+cover:
+  image: "/images/posts/dev-minimind-gods-eye-view.ko.png"
+  alt: "커버 카드: MiniMind 64M 파라미터, RTX 3090으로 2시간 학습, 학습 비용 약 0.43달러, God's Eye View 주간 스타 12,042 증가"
+  relative: false
 draft: false
 ---
 

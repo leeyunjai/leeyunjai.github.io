@@ -5,6 +5,10 @@ slug: "phone-xiaomi-18-fold"
 summary: "Xiaomi has officially launched its first wide-format foldable, the Xiaomi 18 Fold, in China. A 6000mAh battery and a slimmer hinge put it in direct comparison with Samsung's Galaxy Z Fold7."
 tags: ["Smartphone", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/phone-xiaomi-18-fold.en.png"
+  alt: "Cover card: Xiaomi 18 Fold with a 6000mAh battery, 5.02mm unfolded, 219g, and a 200MP main camera"
+  relative: false
 draft: false
 ---
 
@@ -56,6 +60,8 @@ slab phone — has been independently benchmarked yet.
 | Thickness (unfolded) | 5.02mm | TBC |
 | Weight | 219g | TBC |
 | Starting price | ¥10,999 (China, roughly comparable to $1,500) | $1,999 (US) |
+
+![Xiaomi 18 Fold versus Galaxy Z Fold7: 6000 against 4400mAh, 7.58 against 8.0-inch inner display, 5.38 against 6.5-inch cover display, 50 against 12MP ultrawide, 50 against 10MP telephoto](/images/posts/phone-xiaomi-18-fold.en-compare.png "The table above, drawn as bars. Xiaomi leads on battery and secondary cameras; Samsung leads on screen size.")
 
 On paper, the Xiaomi 18 Fold leads on battery capacity and camera resolution. But the Galaxy
 Z Fold7 is already sold in multiple markets with Samsung's water/dust-resistance certification

@@ -254,10 +254,92 @@ tags·categories는 영문으로 통일한다. tags는 실제 다룬 것만 넣�
 
 제품마다: 맥락 1~2문장 → 핵심 스펙 bullet 3~6개 → 가격/출시일 → 의견 1~2줄 → 출처 링크
 
-## 6. 검증
+## 6. 이미지 — 커버 카드 (글마다 필수, 언어별 1장)
+
+**외부 사진은 절대 쓰지 않는다.** 이 실행 환경은 외부 이미지 호스트 다운로드가 차단돼 있고,
+제조사 사진은 저작권 문제가 있다. 대신 **본문에서 확인된 수치로 카드를 직접 그린다.**
+`scripts/postimg.py` 가 렌더링하고, 한글 폰트(Noto Sans KR, OFL)는 저장소에 들어 있다.
+
+### 6-1. 커버 카드 (필수)
+
+```bash
+python3 -c "import PIL" 2>/dev/null || pip install -q pillow
+
+cat > scripts/img-specs/<slug>.ko.json <<'EOF'
+{"kicker": "심층 리뷰 · SBC · 로봇",
+ "title": "<한국어 글 제목을 글자 하나까지 그대로>",
+ "date": "YYYY.MM.DD",
+ "stats": [{"value": "78 TOPS", "label": "AI 연산"},
+           {"value": "8GB", "label": "메모리 (변화 없음)"},
+           {"value": "15~40W", "label": "전력 범위"},
+           {"value": "2027 상반기", "label": "출하"}]}
+EOF
+python3 scripts/postimg.py cover scripts/img-specs/<slug>.ko.json static/images/posts/<slug>.ko.png
+# 영어도 똑같이: scripts/img-specs/<slug>.en.json → static/images/posts/<slug>.en.png
+```
+
+- `stats`는 **본문에 출처와 함께 이미 적힌 수치만** 3~4개. 본문에 없는 숫자는 카드에도 없다.
+- `kicker`는 `카테고리 · 태그`를 해당 언어 표기로. 예) `심층 리뷰 · 스마트폰 · 해외` / `Deep Dive · Phones · Global`
+- `title`은 front matter의 `title`과 완전히 같아야 한다. 카드용으로 줄이거나 바꾸지 않는다.
+- `label`은 짧게. 길면 말줄임표로 잘린다.
+
+### 6-2. 비교 차트 (선택 — 조건을 만족할 때만)
+
+두 제품을 **같은 단위의 숫자로** 비교하는 표가 본문에 있을 때만 그린다.
+
+```bash
+cat > scripts/img-specs/<slug>.ko.compare.json <<'EOF'
+{"title": "A vs B", "a": "A (신형)", "b": "B (현행)",
+ "rows": [{"label": "AI 연산 (TOPS)", "a": 78, "b": 67},
+          {"label": "CUDA 코어", "a": 1536, "b": 1024}],
+ "note": "높을수록 좋은 항목만 · 출처: ..."}
+EOF
+python3 scripts/postimg.py compare scripts/img-specs/<slug>.ko.compare.json \
+        static/images/posts/<slug>.ko-compare.png
+```
+
+**차트에 넣지 말아야 할 행:**
+
+- **낮을수록 좋은 값**(전력, 무게, 두께, 가격). 막대가 길수록 우세해 보이므로 거꾸로 읽힌다.
+  이런 값은 본문 표에만 두고, 차트 `note`에 "본문 표 참고"라고 적는다.
+- 단위가 다른 두 값(예: `350㎡` vs `497분`). 비교가 성립하지 않는다.
+- "확인 필요"인 값. 한쪽 숫자가 없으면 그 행은 빼는 것이 맞다.
+
+비교 가능한 행이 2개 미만이면 **차트를 만들지 않는다.** 표 하나가 더 정확하다.
+
+### 6-3. 글에 연결
+
+front matter에 커버를 넣는다 (두 파일이 각자 자기 언어 이미지를 가리킨다):
+
+```yaml
+cover:
+  image: "/images/posts/<slug>.ko.png"
+  alt: "커버 카드: <카드에 적힌 수치를 문장으로>"
+  relative: false
+```
+
+비교 차트는 본문 비교 표 **바로 아래**에 넣고, 캡션에 무엇을 보라는지 한 줄 쓴다.
+
+```markdown
+![<수치를 문장으로 풀어 쓴 대체 텍스트>](/images/posts/<slug>.ko-compare.png "표를 막대로 그린 것입니다. <핵심 한 줄>")
+```
+
+### 6-4. 확인
+
+- 만든 PNG를 **Read 도구로 열어 본다.** 글자가 타일을 넘치거나 잘리면 `label`을 줄여 다시 그린다.
+- `git add` 에 `static/images/posts/<slug>*.png` 와 `scripts/img-specs/<slug>*.json` 을 반드시 포함한다.
+
+### 절대 규칙
+
+- **AI로 제품 사진을 만들지 않는다.** 실물처럼 보이는 가짜 이미지 한 장이 "확인된 것만"이라는 이 사이트의 약속을 깨뜨린다.
+- 외부 이미지 URL을 핫링크하지 않는다. 언젠가 끊기고, 저작권도 남의 것이다.
+- 카드의 숫자는 전부 본문에 출처와 함께 있어야 한다. 카드가 본문보다 앞서가면 안 된다.
+
+## 7. 검증
 
 - 두 파일의 front matter YAML이 유효한지, `date`·`slug`·`tags`·`categories`가 같은지, `draft: false` 인지.
 - 모든 링크가 http(s) 또는 `/` 로 시작하는지.
+- 두 파일 모두 `cover.image` 가 있고, 그 경로의 PNG가 실제로 존재하는지.
 - 분량:
   ```bash
   sed '1,/^---$/d' content/posts/<file>.en.md | grep -v '^|' | wc -w
@@ -265,13 +347,14 @@ tags·categories는 영문으로 통일한다. tags는 실제 다룬 것만 넣�
   ```
 - `hugo` 는 이 환경에 없다. 빌드 확인은 푸시 후 GitHub Actions 결과로 대신한다.
 
-## 7. 커밋·푸시 (main) — 가장 중요한 단계
+## 8. 커밋·푸시 (main) — 가장 중요한 단계
 
 **글을 다 쓰면 다른 것을 하기 전에 먼저 푸시한다.** 검증이나 정리보다 푸시가 먼저다.
 푸시되지 않은 글은 없는 글이다.
 
 ```bash
-git add content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md
+git add content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md \
+        static/images/posts/<slug>*.png scripts/img-specs/<slug>*.json
 git -c user.name=leeyunjai -c user.email=leeyunjai1982@gmail.com commit -m "post: <English title>"
 git push origin main
 ```
@@ -289,7 +372,7 @@ PR을 만들지 않는다. 시스템 프롬프트에 다른 브랜치로 작업�
 
 푸시 후 GitHub Actions(`Deploy Hugo site to GitHub Pages`) 결과를 한 번 확인한다.
 
-## 8. 실행 기록 (매 실행, 발행하지 않은 날도)
+## 9. 실행 기록 (매 실행, 발행하지 않은 날도)
 
 무슨 일이 있었는지 나중에 볼 수 있게 **매 실행마다** 기록 파일을 하나 남기고 커밋·푸시한다.
 글을 쓰지 않은 날도 남긴다. 이 파일은 사이트에 올라가지 않는다(`content/`·`static/` 밖).
@@ -313,7 +396,7 @@ git push origin main
 어떤 단계에서든 실패하면 **거기서 멈추지 말고** 이 기록에 에러 원문을 적고 푸시한 뒤 끝낸다.
 실행 결과 메시지의 마지막 줄에는 반드시 `decision / commit / deploy` 세 값을 그대로 적는다.
 
-## 9. AdSense 신청 시점 알림 (매 실행 마지막)
+## 10. AdSense 신청 시점 알림 (매 실행 마지막)
 
 ```bash
 POSTS=$(ls content/posts/*.ko.md 2>/dev/null | wc -l)

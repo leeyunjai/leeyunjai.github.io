@@ -5,6 +5,10 @@ slug: "appliance-roborock-saros20-ecovacs-x12s"
 summary: "Roborock's Saros 20 lineup and Ecovacs' Deebot X12S OmniCyclone both launched at IFA 2026. We compare suction power, obstacle-clearing chassis design, mop hygiene, and price."
 tags: ["Home Appliance", "Korea", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/appliance-roborock-saros20-ecovacs-x12s.en.png"
+  alt: "Cover card: Roborock at 36,000Pa suction, Ecovacs at 27,000Pa, 8.8cm threshold clearance, 497 minutes of Ecovacs runtime"
+  relative: false
 draft: false
 ---
 

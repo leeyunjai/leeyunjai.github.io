@@ -1,0 +1,23 @@
+{
+ "kicker": "Dev Picks · GitHub Trending",
+ "title": "MiniMind Thinks Small, God's Eye Sees Big",
+ "date": "Sep 3, 2026",
+ "stats": [
+  {
+   "value": "64M",
+   "label": "MiniMind params"
+  },
+  {
+   "value": "2 hours",
+   "label": "Training (RTX 3090)"
+  },
+  {
+   "value": "~$0.43",
+   "label": "Training cost (README)"
+  },
+  {
+   "value": "+12,042",
+   "label": "God's Eye stars/wk"
+  }
+ ]
+}

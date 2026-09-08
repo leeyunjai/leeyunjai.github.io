@@ -5,6 +5,10 @@ slug: "wearable-huawei-watch-6"
 summary: "Huawei's IFA 2026 launch of the Watch 6 and Watch 6 Pro, compared against Google's Pixel Watch 5 on specs, price, and ecosystem lock-in."
 tags: ["Wearable", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/wearable-huawei-watch-6.en.png"
+  alt: "Cover card: Huawei Watch 6 Pro peaks at 3,500 nits, Watch 6 weighs 38g, £399.99 in the UK, on sale September 23"
+  relative: false
 draft: false
 ---
 

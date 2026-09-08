@@ -5,6 +5,10 @@ slug: "dev-minimind-gods-eye-view"
 summary: "This week's GitHub trending list pairs MiniMind, a 64M-parameter language model you can train in two hours, with God's Eye View, a browser-based 3D globe streaming live satellite, flight, and shipping data."
 tags: ["GitHub"]
 categories: ["Dev Picks"]
+cover:
+  image: "/images/posts/dev-minimind-gods-eye-view.en.png"
+  alt: "Cover card: MiniMind at 64M parameters, two hours of training on an RTX 3090, about $0.43 in cost, God's Eye View up 12,042 stars in a week"
+  relative: false
 draft: false
 ---
 

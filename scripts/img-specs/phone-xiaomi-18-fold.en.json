@@ -1,0 +1,23 @@
+{
+ "kicker": "Deep Dive · Phones · Global",
+ "title": "Xiaomi 18 Fold: A Thinner Body, a Bigger Battery",
+ "date": "Sep 8, 2026",
+ "stats": [
+  {
+   "value": "6000mAh",
+   "label": "Battery"
+  },
+  {
+   "value": "5.02mm",
+   "label": "Unfolded thickness"
+  },
+  {
+   "value": "219g",
+   "label": "Weight"
+  },
+  {
+   "value": "200MP",
+   "label": "Main camera"
+  }
+ ]
+}

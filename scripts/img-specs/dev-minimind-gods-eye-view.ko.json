@@ -1,0 +1,23 @@
+{
+ "kicker": "개발자 픽 · GitHub 트렌딩",
+ "title": "미니마인드는 작게, 갓츠아이뷰는 크게",
+ "date": "2026.09.03",
+ "stats": [
+  {
+   "value": "64M",
+   "label": "MiniMind 파라미터"
+  },
+  {
+   "value": "2시간",
+   "label": "학습 (RTX 3090)"
+  },
+  {
+   "value": "약 $0.43",
+   "label": "학습 비용 (README)"
+  },
+  {
+   "value": "+12,042",
+   "label": "God's Eye 주간 스타"
+  }
+ ]
+}

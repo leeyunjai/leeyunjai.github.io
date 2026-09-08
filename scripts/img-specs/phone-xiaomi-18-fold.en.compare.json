@@ -1,0 +1,33 @@
+{
+ "title": "Xiaomi 18 Fold vs Galaxy Z Fold7",
+ "a": "Xiaomi 18 Fold",
+ "b": "Galaxy Z Fold7",
+ "rows": [
+  {
+   "label": "Battery (mAh)",
+   "a": 6000,
+   "b": 4400
+  },
+  {
+   "label": "Inner display (in)",
+   "a": 7.58,
+   "b": 8.0
+  },
+  {
+   "label": "Cover display (in)",
+   "a": 5.38,
+   "b": 6.5
+  },
+  {
+   "label": "Ultrawide (MP)",
+   "a": 50,
+   "b": 12
+  },
+  {
+   "label": "Telephoto (MP)",
+   "a": 50,
+   "b": 10
+  }
+ ],
+ "note": "Source: Xiaomi launch materials, Samsung product page"
+}

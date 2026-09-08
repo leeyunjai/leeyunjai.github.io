@@ -5,6 +5,10 @@ slug: "brief-galaxy-s26-fe-atlas"
 summary: "Samsung's Galaxy S26 FE went on sale in Korea at KRW 1,045,000, a brainwave-reading wearable called Atlas 1.0 launched abroad, and Upstage's large open model Solar Open2-250B drew attention in software."
 tags: ["Smartphone", "Wearable", "AI Device", "Hugging Face", "Korea", "Global"]
 categories: ["Weekly Brief"]
+cover:
+  image: "/images/posts/brief-galaxy-s26-fe-atlas.en.png"
+  alt: "Weekly brief card: Galaxy S26 FE 256GB at KRW 1,045,000 with a 4,900mAh battery, Atlas 1.0 at $499, Solar Open2 at 250B parameters"
+  relative: false
 draft: false
 ---
 On the last day of the first week of September, Samsung's Galaxy S26 FE officially went on sale in Korea. Abroad, a brainwave-reading wearable called Atlas 1.0 already started shipping, and in software, Upstage's large open model Solar Open2-250B was the talk of the week. None of the three is a dramatic leap on its own, but together they sketch where each part of the market is spending its effort right now: Samsung repackaging known hardware at a lower price, a small hardware maker pushing into an unproven sensor category, and Korean AI labs racing to field their own large open models alongside global names. Links to this week's earlier deep dives on an embedded board, a GitHub pick, and a wearable are collected at the bottom.

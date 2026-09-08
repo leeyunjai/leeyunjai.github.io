@@ -5,6 +5,10 @@ slug: "embedded-jetson-orin-nano-2"
 summary: "NVIDIA's next entry-level Jetson compared against the current Orin Nano Super, with a look at the power envelope and memory ceiling that decide whether it fits a robot."
 tags: ["SBC", "Robot", "Global"]
 categories: ["Deep Dive"]
+cover:
+  image: "/images/posts/embedded-jetson-orin-nano-2.en.png"
+  alt: "Cover card: Jetson Orin Nano 2 at 78 TOPS, memory unchanged at 8GB, 15–40W power range, shipping H1 2027"
+  relative: false
 draft: false
 ---
 
@@ -23,6 +27,8 @@ NVIDIA announced the Jetson Orin Nano 2 on August 25, with the module and develo
 | Availability | H1 2027 | Shipping now |
 
 Sources: [NVIDIA Newsroom](https://nvidianews.nvidia.com/news/nvidia-announces-jetson-orin-nano-2-robotics-computer-to-redefine-entry-level-edge-ai), [Hackster.io](https://www.hackster.io/news/say-hello-to-the-nvidia-jetson-orin-nano-2-68cf1241460f), [NVIDIA Jetson Orin Nano Super Developer Kit](https://www.sparkfun.com/nvidia-jetson-orin-nano-developer-kit.html)
+
+![Orin Nano 2 versus Orin Nano Super: 78 against 67 TOPS, 1,536 against 1,024 CUDA cores, 120 against 102 GB/s of memory bandwidth](/images/posts/embedded-jetson-orin-nano-2.en-compare.png "The higher-is-better rows of the table above, drawn as bars. All three gaps sit between 16% and 50% - a long way from the headline 2x.")
 
 ## The "2x" is not measured at equal power
 
