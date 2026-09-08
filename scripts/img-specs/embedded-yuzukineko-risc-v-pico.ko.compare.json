@@ -1,0 +1,18 @@
+{
+ "title": "유즈키네코 vs 라즈베리파이 피코 2",
+ "a": "유즈키네코",
+ "b": "피코 2",
+ "rows": [
+  {
+   "label": "메모리 (KiB)",
+   "a": 16384,
+   "b": 520
+  },
+  {
+   "label": "내장 저장장치 (MB)",
+   "a": 16,
+   "b": 4
+  }
+ ],
+ "note": "메모리 종류(PSRAM vs SRAM)가 다름 · 출처: CNX Software, Raspberry Pi 공식 발표"
+}

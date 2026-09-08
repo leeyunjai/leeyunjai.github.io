@@ -1,0 +1,23 @@
+{
+ "kicker": "Deep Dive · SBC · Global",
+ "title": "YuzukiNeko, Pico's Size With a Linux Brain",
+ "date": "2026.09.09",
+ "stats": [
+  {
+   "value": "1.008GHz",
+   "label": "C907 RISC-V core"
+  },
+  {
+   "value": "16MiB",
+   "label": "PSRAM"
+  },
+  {
+   "value": "16MiB",
+   "label": "NOR flash"
+  },
+  {
+   "value": "TBC",
+   "label": "Price / launch"
+  }
+ ]
+}

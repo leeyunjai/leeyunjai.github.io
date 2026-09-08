@@ -1,0 +1,23 @@
+{
+ "kicker": "심층 리뷰 · SBC · 해외",
+ "title": "유즈키네코, 피코 크기에 리눅스 두뇌",
+ "date": "2026.09.09",
+ "stats": [
+  {
+   "value": "1.008GHz",
+   "label": "C907 RISC-V 코어"
+  },
+  {
+   "value": "16MiB",
+   "label": "PSRAM"
+  },
+  {
+   "value": "16MiB",
+   "label": "NOR 플래시"
+  },
+  {
+   "value": "미정",
+   "label": "가격·출시"
+  }
+ ]
+}

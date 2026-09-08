@@ -1,0 +1,18 @@
+{
+ "title": "YuzukiNeko vs Raspberry Pi Pico 2",
+ "a": "YuzukiNeko",
+ "b": "Pico 2",
+ "rows": [
+  {
+   "label": "Memory (KiB)",
+   "a": 16384,
+   "b": 520
+  },
+  {
+   "label": "Onboard storage (MB)",
+   "a": 16,
+   "b": 4
+  }
+ ],
+ "note": "Memory type differs (PSRAM vs SRAM) · Sources: CNX Software, Raspberry Pi official"
+}
