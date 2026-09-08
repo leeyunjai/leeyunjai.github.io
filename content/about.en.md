@@ -35,5 +35,5 @@ This is a personal blog. It is not affiliated with any company or manufacturer, 
 ## Contact
 
 - Email: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
-- GitHub: [github.com/leeyunjai](https://github.com/leeyunjai)
-- Corrections and tips: email me or open an [issue](https://github.com/leeyunjai/leeyunjai.github.io/issues). If a spec or price is wrong, send the source and I will fix it.
+- GitHub: [github.com/yjworks](https://github.com/yjworks)
+- Corrections and tips: email me or open an [issue](https://github.com/yjworks/leeyunjai.github.io/issues). If a spec or price is wrong, send the source and I will fix it.

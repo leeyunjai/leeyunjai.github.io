@@ -76,6 +76,6 @@ Google의 데이터 사용에 대한 자세한 내용은 [Google 파트너 사�
 
 - 운영자: 이윤재
 - 이메일: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
-- GitHub: [leeyunjai/leeyunjai.github.io](https://github.com/leeyunjai/leeyunjai.github.io)
+- GitHub: [yjworks/leeyunjai.github.io](https://github.com/yjworks/leeyunjai.github.io)
 
 - 시행일: 2026년 9월 2일

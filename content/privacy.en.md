@@ -76,6 +76,6 @@ For privacy-related questions, please contact:
 
 - Operator: Yunjai Lee
 - Email: [leeyunjai1982@gmail.com](mailto:leeyunjai1982@gmail.com)
-- GitHub: [leeyunjai/leeyunjai.github.io](https://github.com/leeyunjai/leeyunjai.github.io)
+- GitHub: [yjworks/leeyunjai.github.io](https://github.com/yjworks/leeyunjai.github.io)
 
 - Effective date: September 2, 2026

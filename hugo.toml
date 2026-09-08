@@ -97,7 +97,7 @@ buildExpired = false
     [[languages.ko.params.socialIcons]]
       name = "github"
       title = "GitHub"
-      url = "https://github.com/leeyunjai"
+      url = "https://github.com/yjworks"
     [[languages.ko.params.socialIcons]]
       name = "rss"
       title = "RSS"
@@ -144,7 +144,7 @@ buildExpired = false
     [[languages.en.params.socialIcons]]
       name = "github"
       title = "GitHub"
-      url = "https://github.com/leeyunjai"
+      url = "https://github.com/yjworks"
     [[languages.en.params.socialIcons]]
       name = "rss"
       title = "RSS"

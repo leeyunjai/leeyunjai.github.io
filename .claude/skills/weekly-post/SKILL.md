@@ -355,7 +355,7 @@ cover:
 ```bash
 git add content/posts/YYYY-MM-DD-<slug>.ko.md content/posts/YYYY-MM-DD-<slug>.en.md \
         static/images/posts/<slug>*.png scripts/img-specs/<slug>*.json
-git -c user.name=leeyunjai -c user.email=leeyunjai1982@gmail.com commit -m "post: <English title>"
+git -c user.name=yjworks -c user.email=leeyunjai1982@gmail.com commit -m "post: <English title>"
 git push origin main
 ```
 
@@ -389,7 +389,7 @@ cat > runlog/$(TZ=Asia/Seoul date +%F)-<mode>.md <<'EOF'
 - deploy: <success | failure | not-run>
 EOF
 git add runlog
-git -c user.name=leeyunjai -c user.email=leeyunjai1982@gmail.com commit -m "runlog: $(TZ=Asia/Seoul date +%F) <mode>"
+git -c user.name=yjworks -c user.email=leeyunjai1982@gmail.com commit -m "runlog: $(TZ=Asia/Seoul date +%F) <mode>"
 git push origin main
 ```
 

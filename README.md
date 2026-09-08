@@ -7,7 +7,7 @@ Hugo + PaperMod 한/영 기술 블로그. https://leeyunjai.github.io/
 - 자동 작성: 평일 매일 1편. `hw1`(월) `hw2`(화) `embedded`(수) `dev`(목) `brief`(금)
 
 ```bash
-git clone --recurse-submodules https://github.com/leeyunjai/leeyunjai.github.io.git
+git clone --recurse-submodules https://github.com/yjworks/leeyunjai.github.io.git
 hugo server -D
 ```
 
