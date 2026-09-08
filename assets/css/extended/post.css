@@ -20,3 +20,10 @@
   .post-content { font-size: 16px; line-height: 1.75; }
   .post-content h2 { font-size: 22px; }
 }
+
+/* 커버 카드 — 카드 배경이 다크 테마 배경과 같아 경계가 사라지므로 테두리로 형태를 잡는다. */
+.entry-cover { margin: 20px 0 10px; }
+.entry-cover img { border: 1px solid var(--border); border-radius: 8px; display: block; }
+.entry-cover span { display: none; }             /* 캡션 없이 이미지만 */
+/* 본문 비교 차트도 같은 규칙 */
+.post-content img { border: 1px solid var(--border); border-radius: 8px; }
