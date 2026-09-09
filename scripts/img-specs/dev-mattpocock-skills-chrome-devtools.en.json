@@ -1,0 +1,23 @@
+{
+ "kicker": "Dev Picks · GitHub Trending",
+ "title": "Matt Pocock's Skills: One Line, No Code",
+ "date": "2026.09.10",
+ "stats": [
+  {
+   "value": "257,729",
+   "label": "skills repo stars"
+  },
+  {
+   "value": "+13,419",
+   "label": "gained this week"
+  },
+  {
+   "value": "51,455",
+   "label": "devtools-mcp stars"
+  },
+  {
+   "value": "v1.9.0",
+   "label": "released 2026.09.08"
+  }
+ ]
+}
